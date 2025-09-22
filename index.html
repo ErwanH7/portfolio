@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Mon Portfolio</h1>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="translateBtn">EN</button>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>
+            Bonjour, je m'appelle <strong>Hoarau Erwan</strong> et je suis actuellement étudiant en <strong>informatique à l'IUT de Bayonne et du Pays Basque.</strong>
+        </p>
+        <p>
+            Passionné par les <strong>nouvelles technologies</strong>, je souhaite développer mes compétences en 
+            <strong>développement d'applications et de sites web</strong>, dans le but de contribuer à des projets innovants.
+        </p>
+        <p>
+            Mon <strong>esprit d'équipe, ma rigueur et ma discipline</strong> me permettent de m'intégrer rapidement et de mener à bien des projets ambitieux.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Mes projets</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="image/web1.png" alt="Projet_1">
+                <h3>Création d'un site web</h3>
+                <p>Il s'agit de mon premier projet universitaire qui consistait à créer un site sans div ni flex sur le sujet de notre choix.</p>
+            </div>
+            <div class="project-card">
+                <img src="image/app1.png" alt="image_1_projet_2">
+                <img src="image/app2.png" alt="image_2_projet_2">
+                <h3>Développement d’une application</h3>
+                <p>Il s'agit d'un projet universitaire où l'on devais à l'aide d'un cahier des charges produire une application Qt fonctionnel.</p>
+            </div>
+            <div class="project-card">
+                <img src="image/algo_py1.png" alt="image_1_projet_3">
+                <img src="image/algo_py2.png" alt="image_2_projet_3">
+                <h3>Création d'un algorithme de recherche du plus cours chemin</h3>
+                <p>Il s'agit d'un projet universitaire où l'on devais trouver le plus cours chemin entre différents points grâce aux différents 
+                    algorithmes (Dijkstra, A*, Bellman-Ford) codé en python.
+                </p>
+            </div>
+            <div class="project-card">
+                <img src="image/logo_soundrise.png" alt="Projet_4">
+                <h3>Développement d'un site web grâce à un cahier des charges</h3>
+                <p>Il s'agit d'un autre projet universitaire qui consiste à produire un cahier des charges dans un premier temps (ce que l'on a fait en 1ère année) puis
+                    dans un second temps produire un site web fonctionnel (ce que l'on a fait en 2ème année).
+                </p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contactForm" action="contact.php" method="POST">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="formStatus"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
