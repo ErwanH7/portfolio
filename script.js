@@ -42,11 +42,11 @@ const translations = {
         project1bis: "Lien vers le GitHub du projet.",
         
         project2Title: "Développement d’une application",
-        project2Desc: "Il s'agit d'un projet universitaire où l'on devais à l'aide d'un cahier des charges produire une application Qt fonctionnel.",
+        project2Desc: "Il s'agit d'un projet universitaire où l'on devait à l'aide d'un cahier des charges produire une application Qt fonctionnel.",
         project2bis: "Lien vers le GitHub du projet.",
 
         project3Title: "Création d'un algorithme de recherche du plus cours chemin",
-        project3Desc: "Il s'agit d'un projet universitaire où l'on devais trouver le plus cours chemin entre différents points grâce aux différents algorithmes (Dijkstra, A*, Bellman-Ford) codé en python.",
+        project3Desc: "Il s'agit d'un projet universitaire où l'on devait trouver le plus cours chemin entre différents points grâce aux différents algorithmes (Dijkstra, A*, Bellman-Ford) codé en python.",
         project3bis: "Lien vers le GitHub du projet.",
 
         project4Title: "Développement d'un site web grâce à un cahier des charges",
@@ -170,7 +170,7 @@ projectImages.forEach(img => {
             overlay.style.left = 0;
             overlay.style.width = "100%";
             overlay.style.height = "100%";
-            overlay.style.backgroundColor = "#012459";
+            overlay.style.background = "linear-gradient(to top, #012459, #490252ff)";
             overlay.style.display = "flex";
             overlay.style.alignItems = "center";
             overlay.style.justifyContent = "center";

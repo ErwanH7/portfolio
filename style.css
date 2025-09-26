@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
 * { margin:0; padding:0; box-sizing:border-box; font-family: "Comfortaa", sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: normal; }
-body { line-height:1.6; background: url("image/img_fond.jpg") no-repeat center center fixed; background-size: cover; color:#f7f3f3; scroll-behavior: smooth; padding-top: 80px;}
+body { line-height:1.6; background: linear-gradient(#012459, rgb(110, 2, 125)); background-size: cover; color:#f7f3f3; scroll-behavior: smooth; padding-top: 80px;}
 header { background:#333; color:#fff; padding:20px 0; width: 100%; position: fixed; top: 0; left: 0; z-index: 1000; transition: top 0.3s; }
 header nav { display:flex; justify-content:space-between; align-items:center; width:90%; margin:0 auto; }
 header nav ul { list-style:none; display:flex; gap:20px; }
@@ -12,8 +12,8 @@ section { padding:60px 20px; width:90%; margin:0 auto; }
 h2 { margin-bottom:20px; text-align:center; }
 .projects-container { display:block; margin-bottom:20px; }
 .project-card { margin-bottom:20px; }
-.project-card { background:#012459; padding:15px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); text-align:center; transition: transform 0.3s, opacity 0.6s; opacity: 0; transform: translateY(50px); }
-.project-card:hover { transform: scale(1.05); }
+.project-card { background:linear-gradient(to top,#012459,rgb(109, 2, 123)); padding:15px; border-radius:10px; border: 2px solid rgba(255, 255, 255, 0.15); box-shadow:0 0 10px rgba(0,0,0,0.3); text-align:center; transition: transform 0.3s, opacity 0.6s; opacity: 0; transform: translateY(50px); }
+.project-card:hover { transform: scale(1.05); border-color: rgba(255, 255, 255, 0.4); }
 .project-card img { max-width:20%; border-radius:10px; transition: transform 0.3s ease, max-width 0.3s ease; }
 
 form { display:flex; flex-direction:column; gap:15px; max-width:500px; margin:0 auto; }
@@ -25,6 +25,6 @@ footer { text-align:center; padding:20px; background:#333; color:#fff; }
 
 p { line-height: 1.7; margin-bottom: 15px; color: #f7f3f3; font-size: 1.1rem;}
 
-p strong { color: #5a82e7;}
+p strong { color: #a5baee;}
 
 a { color: #e254f4; text-decoration: none; }
