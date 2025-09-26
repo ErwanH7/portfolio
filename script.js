@@ -226,3 +226,10 @@ window.addEventListener('pageshow', () => {
 window.addEventListener('beforeunload', () => {
   window.scrollTo(0, 0);
 });
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.querySelector("header nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
