@@ -53,7 +53,12 @@ const translations = {
         project4Desc: "Il s'agit d'un autre projet universitaire qui consiste à produire un cahier des charges dans un premier temps (ce que l'on a fait en 1ère année) puis dans un second temps produire un site web fonctionnel (ce que l'on va faire en 2ème année).",
         project4bis: "Ce projet n'a pas encore de lien car il n'a pas encore commencé.",
 
+        competencesTitle: "Mes Compétences",
+
         contact: "Contact",
+        inputName: "Votre nom",
+        inputEmail: "Votre email",
+        inputMsg: "Votre message",
         sendBtn: "Envoyer"
     },
     en: {
@@ -84,7 +89,12 @@ const translations = {
         project4Desc: "Another university project where we first created a specifications document (in the first year) and then developed a functional website (in the second year).",
         project4bis: "This project does not yet have a link as it has not yet started.",
 
+        competencesTitle: "My Skills",
+
         contact: "Contact",
+        inputName: "Your name",
+        inputEmail: "Your email",
+        inputMsg: "Your message",
         sendBtn: "Send"
     }
 };
@@ -126,31 +136,20 @@ translateBtn.addEventListener("click", () => {
     document.querySelectorAll(".project-card p")[3].innerHTML = t.project4Desc;
     document.querySelectorAll(".project-card p")[4].innerHTML = t.project4bis;
 
+    // Section "Compétences"
+    document.querySelector("#skills h2").innerHTML = t.competencesTitle;
+
     // Section "Contact"
     document.querySelector("#contact h2").innerHTML = t.contact;
+    document.querySelector("#contact input[name='name']").placeholder = t.inputName;
+    document.querySelector("#contact input[name='email']").placeholder = t.inputEmail;
+    document.querySelector("#contact textarea").placeholder = t.inputMsg;
     document.querySelector("#contact button").innerHTML = t.sendBtn;
 
     // Changer le texte du bouton
-    translateBtn.textContent = currentLang === "fr" ? "EN" : "FR";
+    translateBtn.textContent = currentLang === "fr" ? "FR->EN" : "EN->FR";
 });
 
-// Cacher le header en scrollant vers le bas et le montrer en scrollant vers le haut
-let lastScroll = 0;
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 50) {
-        // Dès que tu scrolles un peu, ajoute la classe "fixed"
-        header.classList.add("fixed");
-    } else {
-        // Retour en position statique en haut de la page
-        header.classList.remove("fixed");
-    }
-
-    lastScroll = currentScroll;
-});
 
 // Zoom sur les images des projets au clic
 const projectImages = document.querySelectorAll(".project-card img");
@@ -211,6 +210,25 @@ projectImages.forEach(img => {
     });
 });
 
+
+// Animation des compétences au scroll
+const progressBars = document.querySelectorAll(".progress");
+
+function animateSkills() {
+  progressBars.forEach(bar => {
+    const rect = bar.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100 && !bar.classList.contains("animated")) {
+      setTimeout(() => {
+        bar.style.width = bar.getAttribute("data-value") + "%";
+        bar.classList.add("animated"); // éviter de rejouer l'anim
+      }, 300);
+    }
+  });
+}
+
+window.addEventListener("scroll", animateSkills);
+
+
 // empêcher la restauration automatique du scroll par le navigateur (back/refresh)
 if ('scrollRestoration' in history) {
   try { history.scrollRestoration = 'manual'; } catch (e) { /* ignore si interdit */ }
@@ -233,3 +251,5 @@ const navLinks = document.querySelector("header nav ul");
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
+
+
