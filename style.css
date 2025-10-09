@@ -43,7 +43,7 @@ a { color: #e254f4; text-decoration: none; }
 
 .skill span { font-weight: bold; display: block; margin-bottom: 8px; }
 
-.progress-bar { width: 100%; height: 20px; background: rgba(255, 255, 255, 0.2); border-radius: 10px; overflow: hidden; box-shadow: inset 0 0 5px rgba(0,0,0,0.5); }
-.progress-bar:hover { transform: scale(1.05); border-color: rgba(255, 255, 255, 0.4); }
+.progress-bar { width: 100%; height: 20px; background: rgba(255, 255, 255, 0.2); border-radius: 10px; overflow: hidden; box-shadow: inset 0 0 5px rgba(0,0,0,0.5); transition: ease 0.5s; }
+.progress-bar:hover { transform: scale(1.05); border-color: rgba(255, 255, 255, 0.4); transition: ease 0.5s;}
 .progress { width: 0; height: 100%; background: linear-gradient(90deg, #5a82e7, #e254f4); border-radius: 10px; transition: width 2s ease; }
 

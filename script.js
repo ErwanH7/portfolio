@@ -147,7 +147,9 @@ translateBtn.addEventListener("click", () => {
     document.querySelector("#contact button").innerHTML = t.sendBtn;
 
     // Changer le texte du bouton
-    translateBtn.textContent = currentLang === "fr" ? "FR->EN" : "EN->FR";
+    translateBtn.innerHTML = currentLang === "fr"
+  ? '<span class="fi fi-fr"></span> FR → <span class="fi fi-gb"></span> EN'
+  : '<span class="fi fi-gb"></span> EN → <span class="fi fi-fr"></span> FR';
 });
 
 
