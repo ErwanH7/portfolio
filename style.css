@@ -47,3 +47,4 @@ a { color: #e254f4; text-decoration: none; }
 .progress-bar:hover { transform: scale(1.05); border-color: rgba(255, 255, 255, 0.4); transition: ease 0.5s;}
 .progress { width: 0; height: 100%; background: linear-gradient(90deg, #5a82e7, #e254f4); border-radius: 10px; transition: width 2s ease; }
 
+.contact-links { margin-bottom: 20px; text-align: center; }
