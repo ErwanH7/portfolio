@@ -66,7 +66,8 @@ const translations = {
         contact: "CONTACT",
         contactLink1: "Vous pouvez regarder mon GitHub grâce à ce lien :",
         contactLink2: "Vous pouvez regarder mon LinkedIn grâce à ce lien :",
-        contactLink3: "Ou me contacter directement via le formulaire ci-dessous :",
+        contactLink3: "Télécharger mon CV en cliquant ici :",
+        contactLink4: "Ou me contacter directement via le formulaire ci-dessous :",
         inputName: "Votre nom",
         inputEmail: "Votre email",
         inputMsg: "Votre message",
@@ -113,7 +114,8 @@ const translations = {
         contact: "CONTACT",
         contactLink1: "You can check out my GitHub through this link:",
         contactLink2: "You can check out my LinkedIn through this link:",
-        contactLink3: "Or contact me directly via the form below:",
+        contactLink3: "Download my CV by clicking here:",
+        contactLink4: "Or contact me directly via the form below:",
         inputName: "Your name",
         inputEmail: "Your email",
         inputMsg: "Your message",
@@ -173,7 +175,8 @@ translateBtn.addEventListener("click", () => {
     document.querySelector("#contact h2").innerHTML = t.contact;
     document.querySelectorAll(".contact-links a")[0].innerHTML = t.contactLink1;
     document.querySelectorAll(".contact-links a")[1].innerHTML = t.contactLink2;
-    document.querySelectorAll(".contact-links p")[0].innerHTML = t.contactLink3;
+    document.querySelectorAll(".contact-links a")[2].innerHTML = t.contactLink3;
+    document.querySelectorAll(".contact-links p")[0].innerHTML = t.contactLink4;
     document.querySelector("#contact input[name='name']").placeholder = t.inputName;
     document.querySelector("#contact input[name='email']").placeholder = t.inputEmail;
     document.querySelector("#contact textarea").placeholder = t.inputMsg;
