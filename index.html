@@ -6,24 +6,28 @@
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <nav>
-            <h1>Mon Portfolio</h1>
+            <a href="index.html" class="logo-link">
+                <img src="image/logo.png" alt="Logo Hoarau Erwan" class="logo-header">
+            </a>
             <ul>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html#about">MON PARCOURS</a></li>
+                <li><a href="index.html#projects">PROJETS</a></li>
+                <li><a href="index.html#skills">COMPÉTENCES</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
             </ul>
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
                 <span></span>
+                <span></span>
             </div>
             <button id="translateBtn">
-                <span class="fi fi-fr"></span> FR → <span class="fi fi-gb"></span> EN
+                FR → EN
             </button>
         </nav>
     </header>
@@ -49,14 +53,16 @@
                 <img src="image/web1.png" alt="Projet_1">
                 <h3>Création d'un site web</h3>
                 <p>Il s'agit de mon premier projet universitaire qui consistait à créer un site sans div ni flex sur le sujet de notre choix.</p>
-                <a href="https://github.com/ErwanH7/web">Lien vers le GitHub du projet.</a>
+                <a href="projet-site-web.html" class="btn btn-secondary">Voir les détails du projet</a>
+                <a href="https://github.com/ErwanH7/web" class="btn btn-github">GitHub du projet.</a>
             </div>
             <div class="project-card">
                 <img src="image/app1.png" alt="image_1_projet_2">
                 <img src="image/app2.png" alt="image_2_projet_2">
                 <h3>Développement d’une application</h3>
                 <p>Il s'agit d'un projet universitaire où l'on devait à l'aide d'un cahier des charges produire une application Qt fonctionnel.</p>
-                <a href="https://github.com/ErwanH7/S2.01">Lien vers le GitHub du projet.</a>
+                <a href="projet-application.html" class="btn btn-secondary">Voir les détails du projet</a>
+                <a href="https://github.com/ErwanH7/S2.01" class="btn btn-github">GitHub du projet.</a>
             </div>
             <div class="project-card">
                 <img src="image/algo_py1.png" alt="image_1_projet_3">
@@ -65,16 +71,35 @@
                 <p>Il s'agit d'un projet universitaire où l'on devait trouver le plus cours chemin entre différents points grâce aux différents 
                     algorithmes (Dijkstra, A*, Bellman-Ford) codé en python.
                 </p>
-                <a href="https://github.com/ErwanH7/S2.02">Lien ver le GitHub du projet.</a>
+                <a href="projet-algorithme.html" class="btn btn-secondary">Voir les détails du projet</a>
+                <a href="https://github.com/ErwanH7/S2.02" class="btn btn-github">GitHub du projet.</a>
             </div>
             <div class="project-card">
-                <img src="image/logo_soundrise.png" alt="Projet_4">
+                <img src="image/paaxio_logo_nom_down_noir.png" alt="Projet_4">
                 <h3>Développement d'un site web grâce à un cahier des charges</h3>
                 <p>Il s'agit d'un autre projet universitaire qui consiste à produire un cahier des charges dans un premier temps (ce que l'on a fait en 1ère année) puis
                     dans un second temps produire un site web fonctionnel (ce que l'on va faire en 2ème année).
                 </p>
-                <p>Ce projet n'a pas encore de lien car ce dernier n'est pas encore commencé.</p>
-        </div>
+                <a href="projet-paaxio.html" class="btn btn-secondary">Voir les détails du projet</a>
+                <a href="paaxio.com" class="btn btn-primary">Site web du projet.</a>
+            </div>
+            <div class="project-card">
+                <img src="image/pcSelling_logo.png" alt="Projet_5">
+                <h3>Projet universitaire d'un site web en PHP</h3>
+                <p>Il s'agit d'un projet universitaire qui consiste à créer un site web en PHP avec une base de données SQL.</p>
+                <a href="projet-pcselling.html" class="btn btn-secondary">Voir les détails du projet</a>
+                <a href="https://pcselling.infinityfree.me/" class="btn btn-primary">Site web du projet.</a>
+            </div>
+            <div class="project-card">
+                <img src="image/projetPokedex.png" alt="Projet_6">
+                <h3>Création d'un site web Pokédex </h3>
+                <p>Il s'agit d'un projet personnel qui consiste à créer un Pokédex en utilisant 
+                    une base de données qui provient de base d'un excel trouvé sur internet, mais ne le trouvant pas 
+                    si pratique j'ai décidé de le passer en base de données SQL et d'en faire un site a part entière.</p>
+                <a href="projet-pokedex.html" class="btn btn-secondary">Voir les détails du projet</a>
+                <a href="#" class="btn btn-primary">Projet bientôt disponible !</a>
+            </div>
+            </div>
     </section>
 
     <section id="skills">
@@ -137,6 +162,6 @@
         <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

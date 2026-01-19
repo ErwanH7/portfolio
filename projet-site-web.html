@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création d'un site web - Portfolio Erwan Hoarau</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link">
+                <img src="image/logo.png" alt="Logo Hoarau Erwan" class="logo-header">
+            </a>
+            <ul>
+                <li><a href="index.html#about">MON PARCOURS</a></li>
+                <li><a href="index.html#projects">PROJETS</a></li>
+                <li><a href="index.html#skills">COMPÉTENCES</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button id="translateBtn">
+                <span class="fi fi-fr"></span> FR → <span class="fi fi-gb"></span> EN
+            </button>
+        </nav>
+    </header>
+
+    <section id="project-detail">
+        <a href="index.html#projects" class="back-link">← Retour aux projets</a>
+        
+        <h2>Création d'un site web</h2>
+        
+        <div class="detail-content">
+            <img src="image/web1.png" alt="Capture du site web" class="detail-img">
+            
+            <h3>Description du projet</h3>
+            <p>
+                Ce projet est mon premier projet universitaire réalisé durant ma première année à l'IUT. L'objectif était de créer un site web 
+                sur le sujet de notre choix avec une contrainte particulière : <strong>sans utiliser de div ni de flexbox</strong>. 
+                Cette limitation a poussé à utiliser des approches CSS alternatives et créatives.
+            </p>
+
+            <h3>Objectifs</h3>
+            <ul>
+                <li>Créer un site web fonctionnel et responsive</li>
+                <li>Maîtriser HTML et CSS sans outils modernes (pas de flex)</li>
+                <li>Mettre en place une navigation fluide</li>
+                <li>Gérer les images et l'intégration responsive</li>
+            </ul>
+
+            <h3>Technologies utilisées</h3>
+            <div class="tech-tags">
+                <span><i class="devicon-html5-plain colored"></i> HTML5</span>
+                <span><i class="devicon-css3-plain colored"></i> CSS3</span>
+            </div>
+
+            <h3>Points forts</h3>
+            <ul>
+                <li>Compréhension approfondie du CSS positionnement</li>
+                <li>Gestion responsive sans flexbox</li>
+                <li>Code structuré et respectant les bonnes pratiques de HTML</li>
+            </ul>
+
+            <h3>Apprentissages</h3>
+            <p>
+                Ce projet m'a permis de comprendre les fondamentaux du CSS et du positionnement. 
+                En étant forcé à ne pas utiliser flexbox, j'ai dû apprendre les alternatives comme 
+                le positionnement absolu, le float et l'utilisation intelligente des propriétés display.
+            </p>
+
+            <div class="project-links">
+                <a href="https://github.com/ErwanH7/web" class="btn-github">Voir sur GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Hoarau Erwan. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/project-detail.js"></script>
+</body>
+</html>
