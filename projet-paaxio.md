@@ -1,36 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Paaxio - Portfolio Erwan Hoarau</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/project-detail.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo-link">
-                <img src="image/logo.png" alt="Logo Hoarau Erwan" class="logo-header">
-            </a>
-            <ul>
-                <li><a href="index.html#about">MON PARCOURS</a></li>
-                <li><a href="index.html#projects">PROJETS</a></li>
-                <li><a href="index.html#skills">COMPÉTENCES</a></li>
-                <li><a href="index.html#contact">CONTACT</a></li>
-            </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <button id="translateBtn">
-                <span class="fi fi-fr"></span> FR → <span class="fi fi-gb"></span> EN
-            </button>
-        </nav>
-    </header>
+---
+layout: default
+title: Projet Paaxio - Portfolio Erwan Hoarau
+extra_css:
+  - /css/project-detail.css
+extra_js:
+  - /js/translations-algo.js
+  - /js/project-detail.js
+---
 
     <section id="project-detail">
         <a href="index.html#projects" class="back-link">← Retour aux projets</a>
@@ -120,12 +96,3 @@
             </div>
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2026 Hoarau Erwan. Tous droits réservés.</p>
-    </footer>
-
-    <script src="js/translations-paaxio.js"></script>
-    <script src="js/project-detail.js"></script>
-</body>
-</html>

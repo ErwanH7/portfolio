@@ -1,36 +1,9 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo-link">
-                <img src="image/logo.png" alt="Logo Hoarau Erwan" class="logo-header">
-            </a>
-            <ul>
-                <li><a href="index.html#about">MON PARCOURS</a></li>
-                <li><a href="index.html#projects">PROJETS</a></li>
-                <li><a href="index.html#skills">COMPÉTENCES</a></li>
-                <li><a href="index.html#contact">CONTACT</a></li>
-            </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <button id="translateBtn">
-                FR → EN
-            </button>
-        </nav>
-    </header>
+---
+layout: default
+title: Portfolio Erwan Hoarau
+extra_js:
+  - /js/script.js
+---
 
     <section id="about">
         <h2>À propos de moi</h2>
@@ -157,11 +130,3 @@
         </form>
         <p id="formStatus"></p>
     </section>
-
-    <footer>
-        <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>

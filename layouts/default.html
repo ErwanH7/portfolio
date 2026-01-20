@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ page.title }}</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+
+    {% if page.extra_css %}
+        {% for css in page.extra_css %}
+            <link rel="stylesheet" href="{{ css | relative_url }}">
+        {% endfor %}
+    {% endif %}
+</head>
+
+<body>
+
+{% include header.html %}
+
+{{ content }}
+
+{% include footer.html %}
+
+{% if page.extra_js %}
+    {% for js in page.extra_js %}
+        <script src="{{ js | relative_url }}"></script>
+    {% endfor %}
+{% endif %}
+
+</body>
+</html>
