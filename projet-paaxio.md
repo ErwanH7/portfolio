@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Projet Paaxio - Portfolio Erwan Hoarau
+title: Projet Paaxio
 extra_css:
   - /css/project-detail.css
 extra_js:

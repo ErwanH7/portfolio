@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Développement d'une application - Portfolio Erwan Hoarau
+title: Développement d'une application
 extra_css:
   - /css/project-detail.css
 extra_js:

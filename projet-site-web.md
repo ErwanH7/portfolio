@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Création d'un site web - Portfolio Erwan Hoarau
+title: Création d'un site web
 extra_css:
   - /css/project-detail.css
 extra_js:

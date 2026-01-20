@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Site web PHP - Portfolio Erwan Hoarau
+title: Site web PHP 
 extra_css:
   - /css/project-detail.css
 extra_js:

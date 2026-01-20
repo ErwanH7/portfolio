@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Pokédex - Portfolio Erwan Hoarau
+title: Pokédex
 extra_css:
   - /css/project-detail.css
 extra_js:

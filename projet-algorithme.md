@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Algorithme de recherche du plus court chemin - Portfolio Erwan Hoarau
+title: Algorithme de recherche du plus court chemin
 extra_css:
   - /css/project-detail.css
 extra_js:
