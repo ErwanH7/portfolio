@@ -10,17 +10,17 @@ extra_js:
 
     <section id="project-detail">
         <a href="index.html#projects" class="back-link">← Retour aux projets</a>
-        
+
         <h2>Création d'un site web Pokédex</h2>
         <h3 class="subtitle">Projet personnel avec base de données SQL</h3>
-        
+
         <div class="detail-content">
             <img src="image/projetPokedex.png" alt="Logo Pokédex" class="detail-img">
-            
+
             <h3>Description du projet</h3>
             <p class="project-description">
-                Ce projet personnel m'a permis de créer un <strong>Pokédex complet</strong> - une application web pour consulter 
-                les informations des Pokémon. Le projet a débuté à partir d'une base de données Excel trouvée sur Internet, 
+                Ce projet personnel m'a permis de créer un <strong>Pokédex complet</strong> - une application web pour consulter
+                les informations des Pokémon. Le projet a débuté à partir d'une base de données Excel trouvée sur Internet,
                 que j'ai ensuite transformée en <strong>base de données SQL</strong> pour en faire un véritable site web fonctionnel.
             </p>
 

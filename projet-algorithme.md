@@ -9,20 +9,20 @@ extra_js:
 ---
 
     <section id="project-detail">
-        <a href="index.html#projects" class="back-link">← Retour aux projets</a>
-        
+        <a href="index/#projects" class="back-link">← Retour aux projets</a>
+
         <h2>Algorithme de recherche du plus court chemin</h2>
-        
+
         <div class="detail-content">
             <div class="gallery">
                 <img src="image/algo_py1.png" alt="Préparation de la map" class="detail-img">
                 <img src="image/algo_py2.png" alt="Exécution de l'algorithme" class="detail-img">
             </div>
-            
+
             <h3>Description du projet</h3>
             <p class="project-description">
-                Ce projet universitaire m'a permis d'approfondir mes connaissances en algorithmique et structure de données. 
-                L'objectif était d'implémenter et comparer plusieurs <strong>algorithmes de recherche du plus court chemin</strong> 
+                Ce projet universitaire m'a permis d'approfondir mes connaissances en algorithmique et structure de données.
+                L'objectif était d'implémenter et comparer plusieurs <strong>algorithmes de recherche du plus court chemin</strong>
                 entre différents points dans un graphe, codés entièrement en Python.
             </p>
 
@@ -70,8 +70,8 @@ extra_js:
 
             <h3>Apprentissages</h3>
             <p class="learnings-text">
-                Ce projet m'a permis de maîtriser les concepts fondamentaux d'algorithmique et de structure de données. 
-                J'ai appris à implémenter des algorithmes complexes, à analyser leur performance, et à traiter des graphes. 
+                Ce projet m'a permis de maîtriser les concepts fondamentaux d'algorithmique et de structure de données.
+                J'ai appris à implémenter des algorithmes complexes, à analyser leur performance, et à traiter des graphes.
                 C'est un excellent projet pour démontrer la compréhension des algorithmes classiques en informatique.
             </p>
 

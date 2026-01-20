@@ -11,7 +11,7 @@ extra_js:
             Bonjour, je m'appelle <strong>Hoarau Erwan</strong> et je suis actuellement étudiant en <strong>informatique à l'IUT de Bayonne et du Pays Basque.</strong>
         </p>
         <p>
-            Passionné par les <strong>nouvelles technologies</strong>, je souhaite développer mes compétences en 
+            Passionné par les <strong>nouvelles technologies</strong>, je souhaite développer mes compétences en
             <strong>développement d'applications et de sites web</strong>, dans le but de contribuer à des projets innovants.
         </p>
         <p>
@@ -26,7 +26,7 @@ extra_js:
                 <img src="image/web1.png" alt="Projet_1">
                 <h3>Création d'un site web</h3>
                 <p>Il s'agit de mon premier projet universitaire qui consistait à créer un site sans div ni flex sur le sujet de notre choix.</p>
-                <a href="projet-site-web.html" class="btn btn-secondary">Voir les détails du projet</a>
+                <a href="projet-site-web/" class="btn btn-secondary">Voir les détails du projet</a>
                 <a href="https://github.com/ErwanH7/web" class="btn btn-github">GitHub du projet.</a>
             </div>
             <div class="project-card">
@@ -34,17 +34,17 @@ extra_js:
                 <img src="image/app2.png" alt="image_2_projet_2">
                 <h3>Développement d’une application</h3>
                 <p>Il s'agit d'un projet universitaire où l'on devait à l'aide d'un cahier des charges produire une application Qt fonctionnel.</p>
-                <a href="projet-application.html" class="btn btn-secondary">Voir les détails du projet</a>
+                <a href="projet-application/" class="btn btn-secondary">Voir les détails du projet</a>
                 <a href="https://github.com/ErwanH7/S2.01" class="btn btn-github">GitHub du projet.</a>
             </div>
             <div class="project-card">
                 <img src="image/algo_py1.png" alt="image_1_projet_3">
                 <img src="image/algo_py2.png" alt="image_2_projet_3">
                 <h3>Création d'un algorithme de recherche du plus cours chemin</h3>
-                <p>Il s'agit d'un projet universitaire où l'on devait trouver le plus cours chemin entre différents points grâce aux différents 
+                <p>Il s'agit d'un projet universitaire où l'on devait trouver le plus cours chemin entre différents points grâce aux différents
                     algorithmes (Dijkstra, A*, Bellman-Ford) codé en python.
                 </p>
-                <a href="projet-algorithme.html" class="btn btn-secondary">Voir les détails du projet</a>
+                <a href="projet-algorithme/" class="btn btn-secondary">Voir les détails du projet</a>
                 <a href="https://github.com/ErwanH7/S2.02" class="btn btn-github">GitHub du projet.</a>
             </div>
             <div class="project-card">
@@ -53,23 +53,23 @@ extra_js:
                 <p>Il s'agit d'un autre projet universitaire qui consiste à produire un cahier des charges dans un premier temps (ce que l'on a fait en 1ère année) puis
                     dans un second temps produire un site web fonctionnel (ce que l'on va faire en 2ème année).
                 </p>
-                <a href="projet-paaxio.html" class="btn btn-secondary">Voir les détails du projet</a>
+                <a href="projet-paaxio/" class="btn btn-secondary">Voir les détails du projet</a>
                 <a href="paaxio.com" class="btn btn-primary">Site web du projet.</a>
             </div>
             <div class="project-card">
                 <img src="image/pcSelling_logo.png" alt="Projet_5">
                 <h3>Projet universitaire d'un site web en PHP</h3>
                 <p>Il s'agit d'un projet universitaire qui consiste à créer un site web en PHP avec une base de données SQL.</p>
-                <a href="projet-pcselling.html" class="btn btn-secondary">Voir les détails du projet</a>
+                <a href="projet-pcselling/" class="btn btn-secondary">Voir les détails du projet</a>
                 <a href="https://pcselling.infinityfree.me/" class="btn btn-primary">Site web du projet.</a>
             </div>
             <div class="project-card">
                 <img src="image/projetPokedex.png" alt="Projet_6">
                 <h3>Création d'un site web Pokédex </h3>
-                <p>Il s'agit d'un projet personnel qui consiste à créer un Pokédex en utilisant 
-                    une base de données qui provient de base d'un excel trouvé sur internet, mais ne le trouvant pas 
+                <p>Il s'agit d'un projet personnel qui consiste à créer un Pokédex en utilisant
+                    une base de données qui provient de base d'un excel trouvé sur internet, mais ne le trouvant pas
                     si pratique j'ai décidé de le passer en base de données SQL et d'en faire un site a part entière.</p>
-                <a href="projet-pokedex.html" class="btn btn-secondary">Voir les détails du projet</a>
+                <a href="projet-pokedex/" class="btn btn-secondary">Voir les détails du projet</a>
                 <a href="#" class="btn btn-primary">Projet bientôt disponible !</a>
             </div>
             </div>

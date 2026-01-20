@@ -9,20 +9,20 @@ extra_js:
 ---
 
     <section id="project-detail">
-        <a href="index.html#projects" class="back-link">← Retour aux projets</a>
-        
+        <a href="index/#projects" class="back-link">← Retour aux projets</a>
+
         <h2>Développement d'une application</h2>
-        
+
         <div class="detail-content">
             <div class="gallery">
                 <img src="image/app1.png" alt="Capture 1 de l'application" class="detail-img">
                 <img src="image/app2.png" alt="Capture 2 de l'application" class="detail-img">
             </div>
-            
+
             <h3>Description du projet</h3>
             <p class = "project-description">
-                Ce projet universitaire m'a permis de développer une véritable application desktop en utilisant le framework Qt. 
-                Le travail s'est déroulé en respectant un <strong>cahier des charges détaillé</strong> fourni par les enseignants, 
+                Ce projet universitaire m'a permis de développer une véritable application desktop en utilisant le framework Qt.
+                Le travail s'est déroulé en respectant un <strong>cahier des charges détaillé</strong> fourni par les enseignants,
                 ce qui m'a initié aux méthodes de développement professionnel.
             </p>
 
@@ -60,8 +60,8 @@ extra_js:
 
             <h3>Apprentissages</h3>
             <p class="learnings-text">
-                Ce projet m'a initié au développement d'applications "vraies" avec un framework professionnel. 
-                J'ai appris à travailler avec un cahier des charges, à gérer la complexité d'une application desktop, 
+                Ce projet m'a initié au développement d'applications "vraies" avec un framework professionnel.
+                J'ai appris à travailler avec un cahier des charges, à gérer la complexité d'une application desktop,
                 et à mettre en œuvre des patterns de conception orienté objet.
             </p>
 

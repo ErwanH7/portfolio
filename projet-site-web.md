@@ -7,18 +7,19 @@ extra_js:
   - /js/translations-algo.js
   - /js/project-detail.js
 ---
+
     <section id="project-detail">
         <a href="index.html#projects" class="back-link">← Retour aux projets</a>
-        
+
         <h2>Création d'un site web</h2>
-        
+
         <div class="detail-content">
             <img src="image/web1.png" alt="Capture du site web" class="detail-img">
-            
+
             <h3>Description du projet</h3>
             <p class="project-description">
-                Ce projet est mon premier projet universitaire réalisé durant ma première année à l'IUT. L'objectif était de créer un site web 
-                sur le sujet de notre choix avec une contrainte particulière : <strong>sans utiliser de div ni de flexbox</strong>. 
+                Ce projet est mon premier projet universitaire réalisé durant ma première année à l'IUT. L'objectif était de créer un site web
+                sur le sujet de notre choix avec une contrainte particulière : <strong>sans utiliser de div ni de flexbox</strong>.
                 Cette limitation a poussé à utiliser des approches CSS alternatives et créatives.
             </p>
 
@@ -45,8 +46,8 @@ extra_js:
 
             <h3>Apprentissages</h3>
             <p class="learnings-text">
-                Ce projet m'a permis de comprendre les fondamentaux du CSS et du positionnement. 
-                En étant forcé à ne pas utiliser flexbox, j'ai dû apprendre les alternatives comme 
+                Ce projet m'a permis de comprendre les fondamentaux du CSS et du positionnement.
+                En étant forcé à ne pas utiliser flexbox, j'ai dû apprendre les alternatives comme
                 le positionnement absolu, le float et l'utilisation intelligente des propriétés display.
             </p>
 

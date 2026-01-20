@@ -10,24 +10,24 @@ extra_js:
 
     <section id="project-detail">
         <a href="index.html#projects" class="back-link">← Retour aux projets</a>
-        
+
         <h2>Projet Paaxio</h2>
         <h3 class="subtitle">Développement d'un site web selon un cahier des charges</h3>
-        
+
         <div class="detail-content">
             <img src="image/paaxio_logo_nom_down_blanc.png" alt="Logo Paaxio" class="detail-img">
-            
+
             <h3>Description du projet</h3>
             <p class="project-description">
-                Paaxio est un projet universitaire ambitieux qui se divise en deux phases. 
-                La première phase (première année) a consisté à rédiger un <strong>cahier des charges complet</strong> définissant 
-                les fonctionnalités et les spécifications du site. La deuxième phase (actuellement en cours en deuxième année) 
+                Paaxio est un projet universitaire ambitieux qui se divise en deux phases.
+                La première phase (première année) a consisté à rédiger un <strong>cahier des charges complet</strong> définissant
+                les fonctionnalités et les spécifications du site. La deuxième phase (actuellement en cours en deuxième année)
                 implique le <strong>développement du site web fonctionnel</strong> respectant ce cahier des charges.
             </p>
 
             <h3>Concept du projet</h3>
             <p class="project-concept">
-                Paaxio est une plateforme innovante destinée à offrir une expérience utilisateur unique. 
+                Paaxio est une plateforme innovante destinée à offrir une expérience utilisateur unique.
                 Le projet combine design moderne et fonctionnalités avancées pour répondre aux besoins spécifiques définis dans le cahier des charges.
             </p>
 
@@ -44,8 +44,8 @@ extra_js:
 
             <h3>Phase 2 - Développement web (Année 2) </h3>
             <p class="phase-info-2">
-                Cette phase consiste à implémenter le cahier des charges précédemment défini. 
-                Le site sera développé en respectant scrupuleusement les spécifications et en 
+                Cette phase consiste à implémenter le cahier des charges précédemment défini.
+                Le site sera développé en respectant scrupuleusement les spécifications et en
                 utilisant les meilleures pratiques de développement web.
             </p>
 

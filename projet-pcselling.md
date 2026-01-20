@@ -1,25 +1,26 @@
 ---
 layout: default
-title: Site web PHP 
+title: Site web PHP
 extra_css:
   - /css/project-detail.css
 extra_js:
   - /js/translations-algo.js
   - /js/project-detail.js
 ---
+
     <section id="project-detail">
         <a href="index.html#projects" class="back-link">← Retour aux projets</a>
-        
+
         <h2>Projet de site Web en PHP</h2>
         <h3 class="subtitle">Projet universitaire avec base de données SQL</h3>
-        
+
         <div class="detail-content">
             <img src="image/pcSelling_logo.png" alt="Logo pcSelling" class="detail-img">
-            
+
             <h3>Description du projet</h3>
             <p class="project-description">
-                Ce projet universitaire m'a permis de développer un véritable site web en utilisant <strong>PHP</strong> et une 
-                <strong>base de données SQL</strong>. L'objectif était de créer une plateforme fonctionnelle avec gestion des données, 
+                Ce projet universitaire m'a permis de développer un véritable site web en utilisant <strong>PHP</strong> et une
+                <strong>base de données SQL</strong>. L'objectif était de créer une plateforme fonctionnelle avec gestion des données,
                 authentification utilisateur et interface web interactive.
             </p>
 
