@@ -317,15 +317,19 @@ window.addEventListener('pageshow', () => {
 });
 
 // fallback : essayer aussi avantunload pour les navigateurs qui restaurent autrement
-window.addEventListener('beforeunload', () => {
-  window.scrollTo(0, 0);
-});
-
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.querySelector("header nav ul");
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
+});
+
+// Gestion des liens de navigation
+document.querySelectorAll("header nav ul li a").forEach(link => {
+  link.addEventListener("click", (e) => {
+    // Fermer le menu mobile si ouvert
+    navLinks.classList.remove("active");
+  });
 });
 
 
