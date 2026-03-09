@@ -14,15 +14,6 @@ window.addEventListener('scroll', () => {
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const response = await fetch('contact.php', { method: 'POST', body: data });
-    const result = await response.text();
-    status.textContent = result;
-    form.reset();
-});
-
 // Traduction EN/FR
 const translations = {
     fr: {
@@ -68,16 +59,6 @@ const translations = {
         project6ter: "Projet bientôt disponible !",
 
         competencesTitle: "Mes Compétences",
-
-        contact: "CONTACT",
-        contactLink1: "Vous pouvez regarder mon GitHub grâce à ce lien :",
-        contactLink2: "Vous pouvez regarder mon LinkedIn grâce à ce lien :",
-        contactLink3: "Télécharger mon CV en cliquant ici :",
-        contactLink4: "Ou me contacter directement via le formulaire ci-dessous :",
-        inputName: "Votre nom",
-        inputEmail: "Votre email",
-        inputMsg: "Votre message",
-        sendBtn: "Envoyer"
     },
     en: {
         navAbout: "MY JOURNEY",
@@ -122,25 +103,72 @@ const translations = {
         project6ter: "Project coming soon!",
 
         competencesTitle: "MY SKILLS",
-
-        contact: "CONTACT",
-        contactLink1: "You can check out my GitHub through this link:",
-        contactLink2: "You can check out my LinkedIn through this link:",
-        contactLink3: "Download my CV by clicking here:",
-        contactLink4: "Or contact me directly via the form below:",
-        inputName: "Your name",
-        inputEmail: "Your email",
-        inputMsg: "Your message",
-        sendBtn: "Send"
     }
 };
 
-let currentLang = "fr";
+let currentLang = localStorage.getItem("language") || "fr";
 const translateBtn = document.getElementById("translateBtn");
+
+// Fonction pour mettre à jour le widget Feedeko
+function updateWidgetLanguage(lang) {
+    const widgetT = widgetTranslations[lang];
+    if (!widgetT) return;
+
+    // Attendre que le widget soit créé
+    const checkWidget = setInterval(() => {
+        const btn = document.getElementById("fw-btn");
+        const panel = document.getElementById("fw-panel");
+        
+        if (btn && panel) {
+            clearInterval(checkWidget);
+            
+            // Mettre à jour le bouton (garder le SVG, changer le texte)
+            const btnSVG = btn.querySelector("svg");
+            if (btnSVG) {
+                btn.innerHTML = btnSVG.outerHTML + widgetT.buttonLabel;
+            }
+            
+            // Mettre à jour la panel
+            const title = panel.querySelector("h3");
+            const subtitle = panel.querySelector("p.fw-subtitle");
+            const textarea = document.getElementById("fw-msg");
+            const emailInput = document.getElementById("fw-field-qqw1jz6b");
+            const emailLabel = panel.querySelector("label[for='fw-field-qqw1jz6b']");
+            const sendBtn = document.getElementById("fw-send");
+            
+            if (title) title.textContent = widgetT.title;
+            if (subtitle) subtitle.textContent = widgetT.subtitle;
+            if (textarea) textarea.placeholder = widgetT.placeholder;
+            if (emailInput) emailInput.placeholder = widgetT.emailPlaceholder;
+            if (emailLabel) {
+                const requireMark = emailLabel.querySelector(".fw-field-required");
+                if (requireMark) {
+                    requireMark.textContent = widgetT.requiredText;
+                    requireMark.setAttribute("title", widgetT.requiredLabel);
+                }
+                emailLabel.firstChild.textContent = widgetT.emailLabel;
+            }
+            if (sendBtn) sendBtn.textContent = widgetT.sendLabel;
+            
+            // Mettre à jour la légende required si elle existe
+            const legend = panel.querySelector(".fw-required-legend");
+            if (legend) {
+                legend.textContent = widgetT.requiredText + " " + widgetT.requiredLabel;
+            }
+        }
+    }, 100);
+    
+    // Arrêter après 5 secondes si le widget n'est pas trouvé
+    setTimeout(() => clearInterval(checkWidget), 5000);
+}
 
 translateBtn.addEventListener("click", () => {
     currentLang = currentLang === "fr" ? "en" : "fr";
+    localStorage.setItem("language", currentLang);
     const t = translations[currentLang];
+    
+    // Mettre à jour le widget
+    updateWidgetLanguage(currentLang);
 
     // Navigation
     document.querySelector('nav ul li:nth-child(1) a').innerHTML = t.navAbout;
@@ -195,23 +223,6 @@ translateBtn.addEventListener("click", () => {
 
     // Section "Compétences"
     document.querySelector("#skills h2").innerHTML = t.competencesTitle;
-
-    // Section "Contact"
-    document.querySelector("#contact h2").innerHTML = t.contact;
-    const contactLinks = document.querySelectorAll(".contact-links");
-    if(contactLinks[0] && contactLinks[0].querySelector("a")) {
-        contactLinks[0].querySelector("a").innerHTML = t.contactLink1;
-    }
-    if(contactLinks[1] && contactLinks[1].querySelector("a")) {
-        contactLinks[1].querySelector("a").innerHTML = t.contactLink2;
-    }
-    if(contactLinks[2] && contactLinks[2].querySelector("p")) {
-        contactLinks[2].querySelector("p").innerHTML = t.contactLink4;
-    }
-    document.querySelector("#contact input[name='name']").placeholder = t.inputName;
-    document.querySelector("#contact input[name='email']").placeholder = t.inputEmail;
-    document.querySelector("#contact textarea").placeholder = t.inputMsg;
-    document.querySelector("#contact button").innerHTML = t.sendBtn;
 
     // Changer le texte du bouton
     translateBtn.innerHTML = currentLang === "fr"
@@ -332,4 +343,77 @@ document.querySelectorAll("header nav ul li a").forEach(link => {
   });
 });
 
+// Initialiser la langue sauvegardée au chargement
+(function initLanguage() {
+  const savedLang = localStorage.getItem("language") || "fr";
+  currentLang = savedLang;
+  
+  // Mettre à jour le bouton
+  translateBtn.innerHTML = currentLang === "fr"
+    ? 'FR → EN'
+    : 'EN → FR';
+  
+  // Si la langue n'est pas le français, appliquer les traductions
+  if (currentLang === "en") {
+    const t = translations["en"];
+    
+    // Navigation
+    document.querySelector('nav ul li:nth-child(1) a').innerHTML = t.navAbout;
+    document.querySelector('nav ul li:nth-child(2) a').innerHTML = t.navProjects;
+    document.querySelector('nav ul li:nth-child(3) a').innerHTML = t.navSkills;
+    document.querySelector('nav ul li:nth-child(4) a').innerHTML = t.navContact;
 
+    // Section "À propos"
+    document.querySelector("#about h2").innerHTML = t.aboutTitle;
+    document.querySelectorAll("#about p")[0].innerHTML = t.about1;
+    document.querySelectorAll("#about p")[1].innerHTML = t.about2;
+    document.querySelectorAll("#about p")[2].innerHTML = t.about3;
+
+    // Section "Projets"
+    document.querySelector("#projects h2").innerHTML = t.projectsTitle;
+    
+    // Projet 1
+    document.querySelectorAll(".project-card h3")[0].innerHTML = t.project1Title;
+    document.querySelectorAll(".project-card p")[0].innerHTML = t.project1Desc;
+    document.querySelectorAll(".project-card")[0].querySelectorAll(".btn-secondary")[0].innerHTML = t.project1bis;
+    document.querySelectorAll(".project-card")[0].querySelectorAll(".btn-github")[0].innerHTML = t.project1ter;
+
+    // Projet 2
+    document.querySelectorAll(".project-card h3")[1].innerHTML = t.project2Title;
+    document.querySelectorAll(".project-card p")[1].innerHTML = t.project2Desc;
+    document.querySelectorAll(".project-card")[1].querySelectorAll(".btn-secondary")[0].innerHTML = t.project2bis;
+    document.querySelectorAll(".project-card")[1].querySelectorAll(".btn-github")[0].innerHTML = t.project2ter;
+
+    // Projet 3
+    document.querySelectorAll(".project-card h3")[2].innerHTML = t.project3Title;
+    document.querySelectorAll(".project-card p")[2].innerHTML = t.project3Desc;
+    document.querySelectorAll(".project-card")[2].querySelectorAll(".btn-secondary")[0].innerHTML = t.project3bis;
+    document.querySelectorAll(".project-card")[2].querySelectorAll(".btn-github")[0].innerHTML = t.project3ter;
+
+    // Projet 4
+    document.querySelectorAll(".project-card h3")[3].innerHTML = t.project4Title;
+    document.querySelectorAll(".project-card p")[3].innerHTML = t.project4Desc;
+    document.querySelectorAll(".project-card")[3].querySelectorAll(".btn-secondary")[0].innerHTML = t.project4bis;
+    document.querySelectorAll(".project-card")[3].querySelectorAll(".btn-primary")[0].innerHTML = t.project4ter;
+
+    // Projet 5
+    document.querySelectorAll(".project-card h3")[4].innerHTML = t.project5Title;
+    document.querySelectorAll(".project-card p")[4].innerHTML = t.project5Desc;
+    document.querySelectorAll(".project-card")[4].querySelectorAll(".btn-secondary")[0].innerHTML = t.project5bis;
+    document.querySelectorAll(".project-card")[4].querySelectorAll(".btn-primary")[0].innerHTML = t.project5ter;
+
+    // Projet 6
+    document.querySelectorAll(".project-card h3")[5].innerHTML = t.project6Title;
+    document.querySelectorAll(".project-card p")[5].innerHTML = t.project6Desc;
+    document.querySelectorAll(".project-card")[5].querySelectorAll(".btn-secondary")[0].innerHTML = t.project6bis;
+    document.querySelectorAll(".project-card")[5].querySelectorAll(".btn-primary")[0].innerHTML = t.project6ter;
+
+    // Section "Compétences"
+    document.querySelector("#skills h2").innerHTML = t.competencesTitle;
+  }
+  
+  // Mettre à jour le widget après un délai (s'assurer qu'il est chargé)
+  setTimeout(() => {
+    updateWidgetLanguage(currentLang);
+  }, 1000);
+})();
