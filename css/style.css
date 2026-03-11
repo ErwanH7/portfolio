@@ -848,3 +848,105 @@ button:hover {
 .skill-card-body .progress-bar:hover {
   transform: scaleY(1.4);
 }
+
+/* ══════════════════════════════════════════════════════════
+   SÉLECTEUR DE LANGUE — globe dropdown
+══════════════════════════════════════════════════════════ */
+.lang-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Bouton globe */
+.lang-globe-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 6px 12px 6px 10px;
+  color: #fff;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
+  white-space: nowrap;
+}
+.lang-globe-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--color-accent);
+  flex-shrink: 0;
+  transition: transform 0.4s ease;
+}
+.lang-switcher.open .lang-globe-btn svg {
+  transform: rotate(20deg);
+}
+.lang-globe-btn:hover {
+  background: rgba(226, 84, 244, 0.15);
+  border-color: rgba(226, 84, 244, 0.5);
+  box-shadow: 0 0 12px rgba(226, 84, 244, 0.2);
+}
+
+/* Dropdown */
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 140px;
+  background: linear-gradient(135deg,
+    rgba(2, 0, 31, 0.97) 0%,
+    rgba(38, 0, 76, 0.97) 100%);
+  border: 1px solid rgba(226, 84, 244, 0.3);
+  border-radius: 10px;
+  list-style: none;
+  padding: 6px 0;
+  margin: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  /* Fermé par défaut */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 1000;
+}
+.lang-switcher.open .lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Options */
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 16px;
+  background: none;
+  border: none;
+  color: rgba(247, 243, 243, 0.85);
+  font-family: "Comfortaa", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  text-align: left;
+}
+.lang-option:hover {
+  background: rgba(226, 84, 244, 0.15);
+  color: #fff;
+}
+.lang-option.active {
+  color: var(--color-accent);
+}
+.lang-option .fi {
+  width: 18px;
+  height: 14px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}

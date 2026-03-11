@@ -5,7 +5,7 @@
 
 const translations = {
   fr: {
-    navAbout: "MON PARCOURS", navProjects: "PROJETS", navSkills: "COMPÉTENCES", navContact: "CONTACT",
+    navAbout: "MON PARCOURS", navProjects: "PROJETS", navSkills: "COMPÉTENCES", 
     backLink: "← Retour aux projets",
     appTitle: "Développement d'une application",
     appTitleDesc: "Description du projet",
@@ -34,7 +34,7 @@ const translations = {
     btnLabel: "FR → EN",
   },
   en: {
-    navAbout: "MY JOURNEY", navProjects: "PROJECTS", navSkills: "SKILLS", navContact: "CONTACT",
+    navAbout: "MY JOURNEY", navProjects: "PROJECTS", navSkills: "SKILLS", 
     backLink: "← Back to projects",
     appTitle: "Application Development",
     appTitleDesc: "Project Description",
@@ -60,7 +60,36 @@ const translations = {
     appLearnings: "Learning Outcomes",
     appLearningsText: "This project introduced me to developing \"real\" applications with a professional framework. I learned to work with a specifications document, manage the complexity of a desktop application, and implement object-oriented design patterns.",
     appBtnGitHub: "View on GitHub",
-    btnLabel: "EN → FR",
+    btnLabel: "EN → ES",
+  },
+  es: {
+    navAbout: "MI TRAYECTORIA", navProjects: "PROYECTOS", navSkills: "HABILIDADES",
+    backLink: "← Volver a proyectos",
+    appTitle: "Desarrollo de una aplicación",
+    appTitleDesc: "Descripción del proyecto",
+    appDesc: "Este proyecto universitario me permitió desarrollar una verdadera aplicación de escritorio utilizando el framework Qt. El trabajo se llevó a cabo cumpliendo con un <strong>cahier des charges detallado</strong> proporcionado por los profesores, lo que me introdujo a los métodos de desarrollo profesional.",
+    appObjectives: "Objetivos",
+    appObjective1: "Desarrollar una aplicación funcional según un cahier des charges",
+    appObjective2: "Dominar el framework Qt y el lenguaje C++",
+    appObjective3: "Crear una interfaz de usuario intuitiva",
+    appObjective4: "Gestionar eventos e interacciones del usuario",
+    appObjective5: "Implementar la lógica de negocio según las especificaciones",
+    appTechs: "Tecnologías utilizadas",
+    appFeatures: "Características principales",
+    appFeatures1: "Interfaz gráfica moderna y responsive",
+    appFeatures2: "Gestión de eventos complejos",
+    appFeatures3: "Persistencia de datos",
+    appFeatures4: "Validación de entradas del usuario",
+    appFeatures5: "Retroalimentación en tiempo real",
+    appStrengths: "Puntos fuertes",
+    appStrength1: "Comprensión del modelo Qt y su estructura signal/slot",
+    appStrength2: "Desarrollo de interfaces completas",
+    appStrength3: "Cumplimiento de las especificaciones del cahier des charges",
+    appStrength4: "Código bien estructurado y documentado",
+    appLearnings: "Aprendizajes",
+    appLearningsText: "Este proyecto me introdujo al desarrollo de aplicaciones \"reales\" con un framework profesional. Aprendí a trabajar con un cahier des charges, gestionar la complejidad de una aplicación de escritorio e implementar patrones de diseño orientado a objetos.",
+    appBtnGitHub: "Ver en GitHub",
+    btnLabel: "ES → FR",
   }
 };
 
@@ -68,8 +97,15 @@ function applyAppTranslation(lang) {
   const t = translations[lang];
   if (!t) return;
 
-  document.documentElement.lang = lang === "en" ? "en" : "fr";
+  // <html lang>
+  document.documentElement.lang = lang;
 
+  // Mise à jour du label visible dans le globe
+  const langCurrentEl = document.getElementById("langCurrent");
+  const labels = { fr: "FR", en: "EN", es: "ES" };
+  if (langCurrentEl) langCurrentEl.textContent = labels[lang] || lang.toUpperCase();
+
+  // Rétrocompatibilité translateBtn (pages projet)
   const btn = document.getElementById("translateBtn");
   if (btn) btn.innerHTML = t.btnLabel;
 
@@ -123,13 +159,54 @@ function applyAppTranslation(lang) {
 // ── Init immédiate + bouton ───────────────────────────────────────────────────
 let currentLang = window.SITE_LANG || "fr";
 
-document.addEventListener("DOMContentLoaded", () => {
-  applyAppTranslation(currentLang);
+applyAppTranslation(currentLang);
+if (typeof updateWidgetLanguage === "function") updateWidgetLanguage(currentLang);
+
+ // Révéler la page (supprime le masque posé par lang.js)
   if (typeof window.revealPage === "function") window.revealPage();
 
-  document.getElementById("translateBtn").addEventListener("click", () => {
-    currentLang = currentLang === "fr" ? "en" : "fr";
-    localStorage.setItem("language", currentLang);
-    applyAppTranslation(currentLang);
-  });
-});
+  // ── Sélecteur de langue (globe dropdown) ─────────────────────────────────
+  const langSwitcher  = document.getElementById("langSwitcher");
+  const langGlobeBtn  = document.getElementById("langGlobeBtn");
+  const langDropdown  = document.getElementById("langDropdown");
+  const langCurrent   = document.getElementById("langCurrent");
+  const langOptions   = document.querySelectorAll(".lang-option");
+
+  const langLabels = { fr: "FR", en: "EN", es: "ES" };
+
+  function setActiveLangOption(lang) {
+    langOptions.forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+    if (langCurrent) langCurrent.textContent = langLabels[lang] || lang.toUpperCase();
+  }
+
+  // Init visuelle
+  setActiveLangOption(currentLang);
+
+  if (langGlobeBtn && langDropdown) {
+    // Ouvrir / fermer au clic sur le globe
+    langGlobeBtn.addEventListener("click", e => {
+      e.stopPropagation();
+      langSwitcher.classList.toggle("open");
+    });
+
+    // Fermer en cliquant ailleurs
+    document.addEventListener("click", e => {
+      if (!langSwitcher.contains(e.target)) langSwitcher.classList.remove("open");
+    });
+
+    // Choisir une langue
+    langOptions.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const lang = btn.dataset.lang;
+        currentLang = lang;
+        localStorage.setItem("language", lang);
+        applyAppTranslation(lang);
+        updateWidgetLanguage(lang);
+        setActiveLangOption(lang);
+        langSwitcher.classList.remove("open");
+      });
+    });
+  }
+

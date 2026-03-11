@@ -5,7 +5,7 @@
 
 const translations = {
   fr: {
-    navAbout: "MON PARCOURS", navProjects: "PROJETS", navSkills: "COMPÉTENCES", navContact: "CONTACT",
+    navAbout: "MON PARCOURS", navProjects: "PROJETS", navSkills: "COMPÉTENCES", 
     backLink: "← Retour aux projets",
     paaxioTitle: "Projet Paaxio",
     paaxioSubtitle: "Développement d'un site web selon un cahier des charges",
@@ -46,7 +46,7 @@ const translations = {
     btnLabel: "FR → EN",
   },
   en: {
-    navAbout: "MY JOURNEY", navProjects: "PROJECTS", navSkills: "SKILLS", navContact: "CONTACT",
+    navAbout: "MY JOURNEY", navProjects: "PROJECTS", navSkills: "SKILLS", 
     backLink: "← Back to projects",
     paaxioTitle: "Paaxio Project",
     paaxioSubtitle: "Website Development Based on Specifications",
@@ -84,7 +84,48 @@ const translations = {
     paaxioProjectStatus: "Project Status",
     paaxioProjectStatusDesc: "<strong>Phase 1: </strong> Specifications document completed and validated<br><strong>Phase 2: </strong> In development",
     paaxioBtnGitHub: "View on GitHub",
-    btnLabel: "EN → FR",
+    btnLabel: "EN → ES",
+  },
+  es: {
+    navAbout: "MI TRAYECTORIA", navProjects: "PROYECTOS", navSkills: "HABILIDADES",
+    backLink: "← Volver a proyectos",
+    paaxioTitle: "Proyecto Paaxio",
+    paaxioSubtitle: "Desarrollo de un sitio web según un pliego de condiciones",
+    paaxioTitleDesc: "Descripción del proyecto",
+    paaxioDesc: "Paaxio es un proyecto universitario ambicioso que se divide en dos fases. La primera fase (primer año) consistió en redactar un <strong>pliego de condiciones completo</strong> definiendo las funcionalidades y especificaciones del sitio. La segunda fase (actualmente en curso en segundo año) implica el <strong>desarrollo del sitio web funcional</strong> respetando este pliego de condiciones.",
+    paaxioConcept: "Concepto del proyecto",
+    paaxioConceptDesc: "Paaxio es una plataforma innovadora destinada a ofrecer una experiencia de usuario única. El proyecto combina diseño moderno y funcionalidades avanzadas para satisfacer las necesidades específicas definidas en el pliego de condiciones.",
+    paaxioPhase1: "Fase 1 - Pliego de condiciones (Año 1) ✓",
+    paaxioPhase1li1: "Análisis de necesidades de los usuarios",
+    paaxioPhase1li2: "Definición de las funcionalidades principales",
+    paaxioPhase1li3: "Especificaciones técnicas detalladas",
+    paaxioPhase1li4: "Creación de wireframes y prototipos",
+    paaxioPhase1li5: "Planificación del proyecto",
+    paaxioPhase2: "Fase 2 - Desarrollo del sitio web (Año 2)",
+    paaxioPhase2Desc: "Esta fase consiste en implementar el pliego de condiciones previamente definido. El sitio se desarrollará respetando estrictamente las especificaciones y utilizando las mejores prácticas de desarrollo web.",
+    paaxioObjectives: "Objetivos de desarrollo",
+    paaxioObjective1: "Crear una interfaz de usuario atractiva e intuitiva",
+    paaxioObjective2: "Implementar las funcionalidades según las especificaciones",
+    paaxioObjective3: "Gestionar los datos de manera segura",
+    paaxioObjective4: "Asegurar una experiencia de usuario óptima",
+    paaxioObjective5: "Respetar los estándares web y de accesibilidad",
+    paaxioObjective6: "Asegurar el rendimiento y la escalabilidad",
+    paaxioTechs: "Tecnologías utilizadas",
+    paaxioStrengths: "Puntos fuertes esperados",
+    paaxioStrength1: "Cumplimiento estricto del pliego de condiciones",
+    paaxioStrength2: "Interfaz de usuario profesional",
+    paaxioStrength3: "Código modular y mantenible",
+    paaxioStrength4: "Documentación completa",
+    paaxioLearnings: "Aprendizajes esperados",
+    paaxioLearnings1: "Gestión completa del ciclo de desarrollo de un proyecto",
+    paaxioLearnings2: "Implementación de un pliego de condiciones en un entorno profesional",
+    paaxioLearnings3: "Trabajo en equipo y colaboración",
+    paaxioLearnings4: "Gestión de proyectos y planificación",
+    paaxioLearnings5: "Desarrollo full-stack",
+    paaxioProjectStatus: "Estado del proyecto",
+    paaxioProjectStatusDesc: "<strong>Fase 1: </strong> Pliego de condiciones completado y validado<br><strong>Fase 2: </strong> En desarrollo",
+    paaxioBtnGitHub: "Ver en GitHub",
+    btnLabel: "ES → FR",
   }
 };
 
@@ -92,8 +133,15 @@ function applyPaaxioTranslation(lang) {
   const t = translations[lang];
   if (!t) return;
 
-  document.documentElement.lang = lang === "en" ? "en" : "fr";
+  // <html lang>
+  document.documentElement.lang = lang;
 
+  // Mise à jour du label visible dans le globe
+  const langCurrentEl = document.getElementById("langCurrent");
+  const labels = { fr: "FR", en: "EN", es: "ES" };
+  if (langCurrentEl) langCurrentEl.textContent = labels[lang] || lang.toUpperCase();
+
+  // Rétrocompatibilité translateBtn (pages projet)
   const btn = document.getElementById("translateBtn");
   if (btn) btn.innerHTML = t.btnLabel;
 
@@ -163,13 +211,53 @@ function applyPaaxioTranslation(lang) {
 // ── Init immédiate + bouton ───────────────────────────────────────────────────
 let currentLang = window.SITE_LANG || "fr";
 
-document.addEventListener("DOMContentLoaded", () => {
-  applyPaaxioTranslation(currentLang);
+applyPaaxioTranslation(currentLang);
+if (typeof updateWidgetLanguage === "function") updateWidgetLanguage(currentLang);
+
+ // Révéler la page (supprime le masque posé par lang.js)
   if (typeof window.revealPage === "function") window.revealPage();
 
-  document.getElementById("translateBtn").addEventListener("click", () => {
-    currentLang = currentLang === "fr" ? "en" : "fr";
-    localStorage.setItem("language", currentLang);
-    applyPaaxioTranslation(currentLang);
-  });
-});
+  // ── Sélecteur de langue (globe dropdown) ─────────────────────────────────
+  const langSwitcher  = document.getElementById("langSwitcher");
+  const langGlobeBtn  = document.getElementById("langGlobeBtn");
+  const langDropdown  = document.getElementById("langDropdown");
+  const langCurrent   = document.getElementById("langCurrent");
+  const langOptions   = document.querySelectorAll(".lang-option");
+
+  const langLabels = { fr: "FR", en: "EN", es: "ES" };
+
+  function setActiveLangOption(lang) {
+    langOptions.forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+    if (langCurrent) langCurrent.textContent = langLabels[lang] || lang.toUpperCase();
+  }
+
+  // Init visuelle
+  setActiveLangOption(currentLang);
+
+  if (langGlobeBtn && langDropdown) {
+    // Ouvrir / fermer au clic sur le globe
+    langGlobeBtn.addEventListener("click", e => {
+      e.stopPropagation();
+      langSwitcher.classList.toggle("open");
+    });
+
+    // Fermer en cliquant ailleurs
+    document.addEventListener("click", e => {
+      if (!langSwitcher.contains(e.target)) langSwitcher.classList.remove("open");
+    });
+
+    // Choisir une langue
+    langOptions.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const lang = btn.dataset.lang;
+        currentLang = lang;
+        localStorage.setItem("language", lang);
+        applyPaaxioTranslation(lang);
+        updateWidgetLanguage(lang);
+        setActiveLangOption(lang);
+        langSwitcher.classList.remove("open");
+      });
+    });
+  }

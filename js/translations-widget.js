@@ -25,6 +25,19 @@ const widgetTranslations = {
         emailPlaceholder: "example@gmail.com",
         requiredText: "*",
         requiredLabel: "required"
+    },
+    es: {
+        buttonLabel: "Contáctame",
+        title: "Contáctame",
+        subtitle: "No dudes en contactarme",
+        placeholder: "Tu mensaje",
+        sendLabel: "Enviar",
+        thanksTitle: "¡Gracias!",
+        thanksMessage: "Tu mensaje ha sido enviado con éxito",
+        emailLabel: "Correo electrónico",
+        emailPlaceholder: "example@gmail.com",
+        requiredText: "*",
+        requiredLabel: "requerido"
     }
 };
 

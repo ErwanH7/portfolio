@@ -5,7 +5,7 @@
 
 const translations = {
   fr: {
-    navAbout: "MON PARCOURS", navProjects: "PROJETS", navSkills: "COMPÉTENCES", navContact: "CONTACT",
+    navAbout: "MON PARCOURS", navProjects: "PROJETS", navSkills: "COMPÉTENCES", 
     backLink: "← Retour aux projets",
     algoTitle: "Algorithme de recherche du plus court chemin",
     algoTitleDesc: "Description du projet",
@@ -38,7 +38,7 @@ const translations = {
     btnLabel: "FR → EN",
   },
   en: {
-    navAbout: "MY JOURNEY", navProjects: "PROJECTS", navSkills: "SKILLS", navContact: "CONTACT",
+    navAbout: "MY JOURNEY", navProjects: "PROJECTS", navSkills: "SKILLS",
     backLink: "← Back to projects",
     algoTitle: "Shortest Path Search Algorithm",
     algoTitleDesc: "Project Description",
@@ -68,7 +68,40 @@ const translations = {
     algoResult3: "A* offers the best performance using an appropriate heuristic",
     algoResult4: "Bellman-Ford correctly handles edge cases",
     algoBtnGitHub: "View on GitHub",
-    btnLabel: "EN → FR",
+    btnLabel: "EN → ES",
+  },
+  es: {
+    navAbout: "MI TRAYECTORIA", navProjects: "PROYECTOS", navSkills: "HABILIDADES", 
+    backLink: "← Volver a proyectos",
+    algoTitle: "Algoritmo de búsqueda del camino más corto",
+    algoTitleDesc: "Descripción del proyecto",
+    algoDesc: "Este proyecto universitario me permitió profundizar mis conocimientos en algoritmos y estructuras de datos. El objetivo era implementar y comparar varios <strong>algoritmos de búsqueda del camino más corto</strong> entre diferentes puntos en un grafo, codificados completamente en Python.",
+    algoObjectives: "Objetivos",
+    algoObjective1: "Implementar tres algoritmos principales de camino más corto",
+    algoObjective2: "Comprender los conceptos de grafos y búsqueda de caminos",
+    algoObjective3: "Analizar y comparar el rendimiento de los algoritmos",
+    algoObjective4: "Crear una visualización de los resultados",
+    algoObjective5: "Optimizar el código para diferentes tipos de datos",
+    algoAlgorithms: "Algoritmos implementados",
+    algoDijkstraDesc: "Algoritmo voraz que encuentra el camino más corto desde un vértice fuente a todos los demás vértices, adecuado para grafos con pesos positivos.",
+    algoAStarDesc: "Algoritmo de búsqueda heurística que combina las ventajas de Dijkstra con una heurística para acelerar la búsqueda.",
+    algoBellmanFordDesc: "Algoritmo capaz de manejar aristas con pesos negativos, más lento que Dijkstra pero más flexible.",
+    algoTechs: "Tecnologías utilizadas",
+    algoStrengths: "Puntos fuertes",
+    algoStrength1: "Implementación completa y correcta de tres algoritmos complejos",
+    algoStrength2: "Gestión eficiente de estructuras de datos (listas, diccionarios, prioridades)",
+    algoStrength3: "Análisis comparativo de algoritmos (complejidad temporal y espacial)",
+    algoStrength4: "Visualización gráfica de los resultados",
+    algoStrength5: "Código probado y validado",
+    algoLearnings: "Aprendizajes",
+    algoLearningsText: "Este proyecto me permitió dominar los conceptos fundamentales de algoritmos y estructuras de datos. Aprendí a implementar algoritmos complejos, analizar su rendimiento y procesar grafos. Es un excelente proyecto para demostrar la comprensión de los algoritmos clásicos en informática.",
+    algoResult: "Resultados",
+    algoResult1: "Los tres algoritmos producen los mismos caminos óptimos",
+    algoResult2: "Dijkstra y A* superan a Bellman-Ford en grafos sin pesos negativos",
+    algoResult3: "A* ofrece el mejor rendimiento usando una heurística apropiada",
+    algoResult4: "Bellman-Ford maneja correctamente los casos especiales",
+    algoBtnGitHub: "Ver en GitHub",
+    btnLabel: "ES → FR",
   }
 };
 
@@ -76,8 +109,15 @@ function applyAlgoTranslation(lang) {
   const t = translations[lang];
   if (!t) return;
 
-  document.documentElement.lang = lang === "en" ? "en" : "fr";
+// <html lang>
+  document.documentElement.lang = lang;
 
+  // Mise à jour du label visible dans le globe
+  const langCurrentEl = document.getElementById("langCurrent");
+  const labels = { fr: "FR", en: "EN", es: "ES" };
+  if (langCurrentEl) langCurrentEl.textContent = labels[lang] || lang.toUpperCase();
+
+  // Rétrocompatibilité translateBtn (pages projet)
   const btn = document.getElementById("translateBtn");
   if (btn) btn.innerHTML = t.btnLabel;
 
@@ -137,13 +177,54 @@ function applyAlgoTranslation(lang) {
 // ── Init immédiate + bouton ───────────────────────────────────────────────────
 let currentLang = window.SITE_LANG || "fr";
 
-document.addEventListener("DOMContentLoaded", () => {
-  applyAlgoTranslation(currentLang);
+// appliquer immédiatement les traductions et widget
+applyAlgoTranslation(currentLang);
+if (typeof updateWidgetLanguage === "function") updateWidgetLanguage(currentLang);
+
+ // Révéler la page (supprime le masque posé par lang.js)
   if (typeof window.revealPage === "function") window.revealPage();
 
-  document.getElementById("translateBtn").addEventListener("click", () => {
-    currentLang = currentLang === "fr" ? "en" : "fr";
-    localStorage.setItem("language", currentLang);
-    applyAlgoTranslation(currentLang);
-  });
-});
+  // ── Sélecteur de langue (globe dropdown) ─────────────────────────────────
+  const langSwitcher  = document.getElementById("langSwitcher");
+  const langGlobeBtn  = document.getElementById("langGlobeBtn");
+  const langDropdown  = document.getElementById("langDropdown");
+  const langCurrent   = document.getElementById("langCurrent");
+  const langOptions   = document.querySelectorAll(".lang-option");
+
+  const langLabels = { fr: "FR", en: "EN", es: "ES" };
+
+  function setActiveLangOption(lang) {
+    langOptions.forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+    if (langCurrent) langCurrent.textContent = langLabels[lang] || lang.toUpperCase();
+  }
+
+  // Init visuelle
+  setActiveLangOption(currentLang);
+
+  if (langGlobeBtn && langDropdown) {
+    // Ouvrir / fermer au clic sur le globe
+    langGlobeBtn.addEventListener("click", e => {
+      e.stopPropagation();
+      langSwitcher.classList.toggle("open");
+    });
+
+    // Fermer en cliquant ailleurs
+    document.addEventListener("click", e => {
+      if (!langSwitcher.contains(e.target)) langSwitcher.classList.remove("open");
+    });
+
+    // Choisir une langue
+    langOptions.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const lang = btn.dataset.lang;
+        currentLang = lang;
+        localStorage.setItem("language", lang);
+        applyAlgoTranslation(lang);
+        updateWidgetLanguage(lang);
+        setActiveLangOption(lang);
+        langSwitcher.classList.remove("open");
+      });
+    });
+  }

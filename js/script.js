@@ -1,4 +1,4 @@
-// ── Traductions FR / EN ──────────────────────────────────────────────────────
+// ── Traductions FR / EN / ES ─────────────────────────────────────────────────
 const translations = {
   fr: {
     navAbout:   "MON PARCOURS",
@@ -10,6 +10,16 @@ const translations = {
     about1: "Bonjour, je m'appelle <strong>Hoarau Erwan</strong> et je suis actuellement étudiant en <strong>informatique à l'IUT de Bayonne et du Pays Basque.</strong>",
     about2: "Passionné par les <strong>nouvelles technologies</strong>, je souhaite développer mes compétences en <strong>développement d'applications et de sites web</strong>, dans le but de contribuer à des projets innovants.",
     about3: "Mon <strong>esprit d'équipe, ma rigueur et ma discipline</strong> me permettent de m'intégrer rapidement et de mener à bien des projets ambitieux.",
+
+    timeline1Date:    "2021 — 2024",
+    timeline1Title:   "Baccalauréat Général",
+    timeline1Desc:    "Lycée Pierre Lagourgue, Le Tampon, La Réunion — Diplôme obtenu avec les spécialités Mathématiques et Physique-Chimie.",
+    timeline2Date:    "2024 — 2025",
+    timeline2Title:   "1ère année de BUT Informatique",
+    timeline2Desc:    "IUT de Bayonne et du Pays Basque — Premiers projets en <strong>HTML/CSS</strong>, <strong>Python</strong>, <strong>C++</strong> et algorithmes. Introduction au développement web et aux bases de données <strong>SQL</strong>.",
+    timeline3Date:    "2025 — aujourd'hui",
+    timeline3Title:   "2ème année de BUT Informatique",
+    timeline3Desc:    "Approfondissement en <strong>PHP</strong>, <strong>JavaScript</strong> et <strong>SQL</strong>. Projets full-stack et développement d'applications plus complexes.",
 
     projectsTitle: "MES PROJETS",
     project1Title: "Création d'un site web",
@@ -38,12 +48,13 @@ const translations = {
     project6ter: "Projet bientôt disponible !",
 
     competencesTitle: "MES COMPÉTENCES",
-    skillsWeb: "Web",
-    skillsDb: "Base de données",
-    skillsProg: "Programmation",
+    skillsWeb:   "Web",
+    skillsDb:    "Base de données",
+    skillsProg:  "Programmation",
     skillsTools: "Outils",
     btnLabel: "FR → EN",
   },
+
   en: {
     navAbout:   "MY JOURNEY",
     navProjects:"PROJECTS",
@@ -54,6 +65,16 @@ const translations = {
     about1: "Hello, my name is <strong>Hoarau Erwan</strong> and I am currently a student in <strong>Computer Science at the IUT of Bayonne and the Basque Country.</strong>",
     about2: "Passionate about <strong>new technologies</strong>, I want to develop my skills in <strong>application and web development</strong> in order to contribute to innovative projects.",
     about3: "My <strong>team spirit, rigor and discipline</strong> allow me to quickly integrate and successfully carry out ambitious projects.",
+
+    timeline1Date:    "2021 — 2024",
+    timeline1Title:   "High School Diploma",
+    timeline1Desc:    "Pierre Lagourgue High School, Le Tampon, La Réunion — Diploma obtained with specializations in Mathematics and Physics-Chemistry.",
+    timeline2Date:    "2024 — 2025",
+    timeline2Title:   "1st year of Computer Science Bachelor",
+    timeline2Desc:    "Deepening skills in <strong>PHP</strong>, <strong>JavaScript</strong> and <strong>SQL</strong>. Full-stack projects and more complex application development.",
+    timeline3Date:    "2025 — today",
+    timeline3Title:   "2nd year of Computer Science Bachelor",
+    timeline3Desc:    "Deepening skills in <strong>PHP</strong>, <strong>JavaScript</strong> and <strong>SQL</strong>. Full-stack projects and more complex application development.",
 
     projectsTitle: "PROJECTS",
     project1Title: "Website Creation",
@@ -82,11 +103,66 @@ const translations = {
     project6ter: "Project coming soon!",
 
     competencesTitle: "SKILLS",
-    skillsWeb: "Web",
-    skillsDb: "Database",
-    skillsProg: "Programming",
+    skillsWeb:   "Web",
+    skillsDb:    "Database",
+    skillsProg:  "Programming",
     skillsTools: "Tools",
-    btnLabel: "EN → FR",
+    btnLabel: "EN → ES",
+  },
+
+  es: {
+    navAbout:   "MI TRAYECTORIA",
+    navProjects:"PROYECTOS",
+    navSkills:  "HABILIDADES",
+    navContact: "CONTACTO",
+
+    aboutTitle: "MI TRAYECTORIA DIGITAL",
+    about1: "Hola, me llamo <strong>Hoarau Erwan</strong> y actualmente soy estudiante de <strong>informática en el IUT de Bayona y del País Vasco.</strong>",
+    about2: "Apasionado por las <strong>nuevas tecnologías</strong>, quiero desarrollar mis habilidades en <strong>desarrollo de aplicaciones y sitios web</strong> para contribuir a proyectos innovadores.",
+    about3: "Mi <strong>espíritu de equipo, rigor y disciplina</strong> me permiten integrarme rápidamente y llevar a cabo proyectos ambiciosos.",
+
+    timeline1Date:    "2021 — 2024",
+    timeline1Title:   "Bachillerato",
+    timeline1Desc:    "Escuela secundaria Pierre Lagourgue, Le Tampon, La Réunion — Título obtenido con especializaciones en Matemáticas y Física-Química.",
+    timeline2Date:    "2024 — 2025",
+    timeline2Title:   "1er año de Grado en Informática",
+    timeline2Desc:    "IUT de Bayona y del País Vasco — Primeros proyectos en <strong>HTML/CSS</strong>, <strong>Python</strong>, <strong>C++</strong> y algoritmia. Introducción al desarrollo web y a las bases de datos <strong>SQL</strong>.",
+    timeline3Date:    "2025 — hoy",
+    timeline3Title:   "2º año de Grado en Informática",
+    timeline3Desc:    "Profundización en <strong>PHP</strong>, <strong>JavaScript</strong> y <strong>SQL</strong>. Proyectos full-stack y desarrollo de aplicaciones más complejas.",
+
+    projectsTitle: "MIS PROYECTOS",
+    project1Title: "Creación de un sitio web",
+    project1Desc:  "Mi primer proyecto universitario: crear un sitio sin <strong>div</strong> ni <strong>flex</strong> sobre un tema de nuestra elección.",
+    project1bis: "Ver detalles del proyecto",
+    project1ter: "GitHub del proyecto.",
+    project2Title: "Desarrollo de una aplicación",
+    project2Desc:  "Proyecto universitario para desarrollar una aplicación <strong>Qt</strong> funcional en <strong>C++</strong> a partir de un pliego de condiciones.",
+    project2bis: "Ver detalles del proyecto",
+    project2ter: "GitHub del proyecto.",
+    project3Title: "Algoritmo de búsqueda del camino más corto",
+    project3Desc:  "Proyecto universitario para encontrar el camino más corto entre distintos puntos usando los algoritmos <strong>Dijkstra</strong>, <strong>A*</strong> y <strong>Bellman-Ford</strong> en <strong>Python</strong>.",
+    project3bis: "Ver detalles del proyecto",
+    project3ter: "GitHub del proyecto.",
+    project4Title: "Desarrollo de un sitio web a partir de un pliego de condiciones",
+    project4Desc:  "Proyecto universitario en dos fases: redacción del pliego de condiciones (1er año) y desarrollo del sitio en <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>PHP</strong> y <strong>MySQL</strong> (2º año).",
+    project4bis: "Ver detalles del proyecto",
+    project4ter: "Sitio web del proyecto.",
+    project5Title: "Proyecto universitario de sitio web en <strong>PHP</strong>",
+    project5Desc:  "Proyecto universitario para crear un sitio web en <strong>PHP</strong> con una base de datos <strong>SQL</strong>.",
+    project5bis: "Ver detalles del proyecto",
+    project5ter: "Sitio web del proyecto.",
+    project6Title: "Creación de un sitio web Pokédex",
+    project6Desc:  "Proyecto personal: conversión de una base de datos Excel a <strong>SQL</strong>, luego desarrollo de un sitio completo en <strong>PHP</strong>, <strong>MySQL</strong>, <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong>.",
+    project6bis: "Ver detalles del proyecto",
+    project6ter: "¡Proyecto próximamente disponible!",
+
+    competencesTitle: "MIS HABILIDADES",
+    skillsWeb:   "Web",
+    skillsDb:    "Base de datos",
+    skillsProg:  "Programación",
+    skillsTools: "Herramientas",
+    btnLabel: "ES → FR",
   }
 };
 
@@ -96,9 +172,14 @@ function applyTranslation(lang) {
   if (!t) return;
 
   // <html lang>
-  document.documentElement.lang = lang === "en" ? "en" : "fr";
+  document.documentElement.lang = lang;
 
-  // Bouton
+  // Mise à jour du label visible dans le globe
+  const langCurrentEl = document.getElementById("langCurrent");
+  const labels = { fr: "FR", en: "EN", es: "ES" };
+  if (langCurrentEl) langCurrentEl.textContent = labels[lang] || lang.toUpperCase();
+
+  // Rétrocompatibilité translateBtn (pages projet)
   const btn = document.getElementById("translateBtn");
   if (btn) btn.innerHTML = t.btnLabel;
 
@@ -109,13 +190,29 @@ function applyTranslation(lang) {
   if (navItems[2]) navItems[2].innerHTML = t.navSkills;
   if (navItems[3]) navItems[3].innerHTML = t.navContact;
 
-  // Section about
+  // Section about — paragraphes
   const aboutH2 = document.querySelector("#about h2");
   if (aboutH2) aboutH2.innerHTML = t.aboutTitle;
-  const aboutPs = document.querySelectorAll("#about p");
+  const aboutPs = document.querySelectorAll("#about > p");
   if (aboutPs[0]) aboutPs[0].innerHTML = t.about1;
   if (aboutPs[1]) aboutPs[1].innerHTML = t.about2;
   if (aboutPs[2]) aboutPs[2].innerHTML = t.about3;
+
+  // Timeline
+  const timelineItems = document.querySelectorAll(".timeline-item");
+  if (timelineItems.length >= 2) {
+    const setTimeline = (item, date, title, desc) => {
+      const dateEl  = item.querySelector(".timeline-date");
+      const titleEl = item.querySelector("h3");
+      const descEl  = item.querySelector("p");
+      if (dateEl)  dateEl.innerHTML  = date;
+      if (titleEl) titleEl.innerHTML = title;
+      if (descEl)  descEl.innerHTML  = desc;
+    };
+    setTimeline(timelineItems[0], t.timeline1Date, t.timeline1Title, t.timeline1Desc);
+    setTimeline(timelineItems[1], t.timeline2Date, t.timeline2Title, t.timeline2Desc);
+    setTimeline(timelineItems[2], t.timeline3Date, t.timeline3Title, t.timeline3Desc);
+  }
 
   // Section projets
   const projH2 = document.querySelector("#projects h2");
@@ -151,9 +248,8 @@ function applyTranslation(lang) {
   const skillsH2 = document.querySelector("#skills h2");
   if (skillsH2) skillsH2.innerHTML = t.competencesTitle;
 
-  // Titres des cartes compétences (EN uniquement, FR est déjà dans le HTML)
   const skillCardHeaders = document.querySelectorAll(".skill-card-header h3");
-  if (t.skillsWeb && skillCardHeaders.length >= 4) {
+  if (skillCardHeaders.length >= 4) {
     skillCardHeaders[0].innerHTML = t.skillsWeb;
     skillCardHeaders[1].innerHTML = t.skillsDb;
     skillCardHeaders[2].innerHTML = t.skillsProg;
@@ -173,11 +269,57 @@ document.addEventListener("DOMContentLoaded", () => {
   // Révéler la page (supprime le masque posé par lang.js)
   if (typeof window.revealPage === "function") window.revealPage();
 
-  // ── Bouton de traduction ───────────────────────────────────────────────────
+  // ── Sélecteur de langue (globe dropdown) ─────────────────────────────────
+  const langSwitcher  = document.getElementById("langSwitcher");
+  const langGlobeBtn  = document.getElementById("langGlobeBtn");
+  const langDropdown  = document.getElementById("langDropdown");
+  const langCurrent   = document.getElementById("langCurrent");
+  const langOptions   = document.querySelectorAll(".lang-option");
+
+  const langLabels = { fr: "FR", en: "EN", es: "ES" };
+
+  function setActiveLangOption(lang) {
+    langOptions.forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+    if (langCurrent) langCurrent.textContent = langLabels[lang] || lang.toUpperCase();
+  }
+
+  // Init visuelle
+  setActiveLangOption(currentLang);
+
+  if (langGlobeBtn && langDropdown) {
+    // Ouvrir / fermer au clic sur le globe
+    langGlobeBtn.addEventListener("click", e => {
+      e.stopPropagation();
+      langSwitcher.classList.toggle("open");
+    });
+
+    // Fermer en cliquant ailleurs
+    document.addEventListener("click", e => {
+      if (!langSwitcher.contains(e.target)) langSwitcher.classList.remove("open");
+    });
+
+    // Choisir une langue
+    langOptions.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const lang = btn.dataset.lang;
+        currentLang = lang;
+        localStorage.setItem("language", lang);
+        applyTranslation(lang);
+        updateWidgetLanguage(lang);
+        setActiveLangOption(lang);
+        langSwitcher.classList.remove("open");
+      });
+    });
+  }
+
+  // Rétrocompatibilité : translateBtn si présent (pages projet)
   const translateBtn = document.getElementById("translateBtn");
   if (translateBtn) {
     translateBtn.addEventListener("click", () => {
-      currentLang = currentLang === "fr" ? "en" : "fr";
+      const cycle = { fr: "en", en: "es", es: "fr" };
+      currentLang = cycle[currentLang] || "fr";
       localStorage.setItem("language", currentLang);
       applyTranslation(currentLang);
       updateWidgetLanguage(currentLang);

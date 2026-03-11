@@ -5,7 +5,7 @@
 
 const translations = {
   fr: {
-    navAbout: "MON PARCOURS", navProjects: "PROJETS", navSkills: "COMPÉTENCES", navContact: "CONTACT",
+    navAbout: "MON PARCOURS", navProjects: "PROJETS", navSkills: "COMPÉTENCES", 
     backLink: "← Retour aux projets",
     pokeTitle: "Création d'un site web Pokédex",
     pokeSubtitle: "Projet personnel avec base de données SQL",
@@ -51,11 +51,11 @@ const translations = {
     pokeLearning5: "Créativité dans l'implémentation d'une idée",
     pokeStatut: "État du projet",
     pokeStatutText: "<strong>Statut : </strong> Projet personnel en développement continu<br><strong>Disponibilité : </strong> Bientôt disponible en ligne",
-    pokeBtnGithub: "Voir sur GitHub",
+    pokeBtnGithub: "Lien (à venir)",
     btnLabel: "FR → EN",
   },
   en: {
-    navAbout: "MY JOURNEY", navProjects: "PROJECTS", navSkills: "SKILLS", navContact: "CONTACT",
+    navAbout: "MY JOURNEY", navProjects: "PROJECTS", navSkills: "SKILLS", 
     backLink: "← Back to projects",
     pokeTitle: "Creating a Pokédex Website",
     pokeSubtitle: "Personal project with SQL database",
@@ -101,8 +101,58 @@ const translations = {
     pokeLearning5: "Creativity in implementing an idea",
     pokeStatut: "Project Status",
     pokeStatutText: "<strong>Status: </strong> Ongoing personal project<br><strong>Availability: </strong> Coming soon online",
-    pokeBtnGithub: "View on GitHub",
-    btnLabel: "EN → FR",
+    pokeBtnGithub: "Link (coming soon)",
+    btnLabel: "EN → ES",
+  },
+  es: {
+    navAbout: "MI TRAYECTORIA", navProjects: "PROYECTOS", navSkills: "HABILIDADES",
+    backLink: "← Volver a proyectos",
+    pokeTitle: "Creación de un sitio web Pokédex",
+    pokeSubtitle: "Proyecto personal con base de datos SQL",
+    pokeTitleDesc: "Descripción del proyecto",
+    pokeDesc: "Este proyecto personal me permitió crear un <strong>Pokédex completo</strong>, una aplicación web para consultar información de los Pokémon. El proyecto comenzó a partir de una base de datos en Excel encontrada en línea, que luego convertí en una <strong>base de datos SQL</strong> para construir un sitio web completamente funcional.",
+    pokeEvolutions: "Evolución del proyecto",
+    pokeEvolution1: "Descubrimiento de una base de datos Pokémon en Excel",
+    pokeEvolution2: "Conversión a base de datos SQL estructurada",
+    pokeEvolution3: "Desarrollo del sitio web de consulta",
+    pokeEvolution4: "Adición de características avanzadas",
+    pokeEvolution5: "Optimización y mejora continua",
+    pokeObjectives: "Objetivos",
+    pokeObjective1: "Crear una aplicación web atractiva y funcional",
+    pokeObjective2: "Gestionar eficientemente una gran base de datos (1000+ Pokémon)",
+    pokeObjective3: "Implementar funciones de búsqueda y filtrado",
+    pokeObjective4: "Crear una interfaz de usuario ergonómica",
+    pokeObjective5: "Mejorar el rendimiento de la navegación de datos",
+    pokeTechs: "Tecnologías utilizadas",
+    pokeFeatures: "Características principales",
+    pokeFeature1: "Catálogo completo de todos los Pokémon",
+    pokeFeature2: "Búsqueda por nombre, tipo o generación",
+    pokeFeature3: "Seleccionar los Pokémon capturados",
+    pokeFeature4: "Comparación de Pokédex (basada en el número de Pokémon capturados)",
+    pokeFeature5: "Interfaz responsive e intuitiva",
+    pokeStrengths: "Puntos fuertes",
+    pokeStrength1: "Base de datos bien estructurada con más de 1000 entradas",
+    pokeStrength2: "Consultas SQL optimizadas para el rendimiento",
+    pokeStrength3: "Interfaz atractiva y fácil de usar",
+    pokeStrength4: "Búsqueda y filtrado rápidos y precisos",
+    pokeStrength5: "Código modular y extensible",
+    pokeTechChallenges: "Desafíos técnicos",
+    pokeChallenge1: "Estructuración eficiente de una gran base de datos",
+    pokeChallenge2: "Optimización de consultas para el rendimiento",
+    pokeChallenge3: "Implementación de búsqueda multi-criterio",
+    pokeChallenge4: "Gestión de imágenes (varias por Pokémon)",
+    pokeChallenge5: "Diseño responsive para todos los dispositivos",
+    pokeLearnings: "Aprendizajes",
+    pokeLearningsText: "Este proyecto personal me permitió profundizar mis habilidades en:",
+    pokeLearning1: "Conversión y estructuración de datos existentes",
+    pokeLearning2: "Diseño de bases de datos relacionales complejas",
+    pokeLearning3: "Optimización del rendimiento con SQL",
+    pokeLearning4: "Desarrollo personal y autoaprendizaje",
+    pokeLearning5: "Creatividad en la implementación de una idea",
+    pokeStatut: "Estado del proyecto",
+    pokeStatutText: "<strong>Estado: </strong> Proyecto personal en desarrollo continuo<br><strong>Disponibilidad: </strong> Próximamente disponible en línea",
+    pokeBtnGithub: "Enlace (próximamente)",
+    btnLabel: "ES → FR",
   }
 };
 
@@ -110,8 +160,15 @@ function applyPokeTranslation(lang) {
   const t = translations[lang];
   if (!t) return;
 
-  document.documentElement.lang = lang === "en" ? "en" : "fr";
+  // <html lang>
+  document.documentElement.lang = lang;
 
+  // Mise à jour du label visible dans le globe
+  const langCurrentEl = document.getElementById("langCurrent");
+  const labels = { fr: "FR", en: "EN", es: "ES" };
+  if (langCurrentEl) langCurrentEl.textContent = labels[lang] || lang.toUpperCase();
+
+  // Rétrocompatibilité translateBtn (pages projet)
   const btn = document.getElementById("translateBtn");
   if (btn) btn.innerHTML = t.btnLabel;
 
@@ -183,18 +240,62 @@ function applyPokeTranslation(lang) {
 
   const statut = document.querySelector(".project-statut");
   if (statut) statut.innerHTML = t.pokeStatutText;
+  
+  const ghBtn = document.querySelector(".btn-github");
+  if (ghBtn) ghBtn.innerHTML = t.pokeBtnGithub;
 }
 
 // ── Init immédiate + bouton ───────────────────────────────────────────────────
 let currentLang = window.SITE_LANG || "fr";
 
-document.addEventListener("DOMContentLoaded", () => {
-  applyPokeTranslation(currentLang);
+applyPokeTranslation(currentLang);
+if (typeof updateWidgetLanguage === "function") updateWidgetLanguage(currentLang);
+
+ // Révéler la page (supprime le masque posé par lang.js)
   if (typeof window.revealPage === "function") window.revealPage();
 
-  document.getElementById("translateBtn").addEventListener("click", () => {
-    currentLang = currentLang === "fr" ? "en" : "fr";
-    localStorage.setItem("language", currentLang);
-    applyPokeTranslation(currentLang);
-  });
-});
+  // ── Sélecteur de langue (globe dropdown) ─────────────────────────────────
+  const langSwitcher  = document.getElementById("langSwitcher");
+  const langGlobeBtn  = document.getElementById("langGlobeBtn");
+  const langDropdown  = document.getElementById("langDropdown");
+  const langCurrent   = document.getElementById("langCurrent");
+  const langOptions   = document.querySelectorAll(".lang-option");
+
+  const langLabels = { fr: "FR", en: "EN", es: "ES" };
+
+  function setActiveLangOption(lang) {
+    langOptions.forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+    if (langCurrent) langCurrent.textContent = langLabels[lang] || lang.toUpperCase();
+  }
+
+  // Init visuelle
+  setActiveLangOption(currentLang);
+
+  if (langGlobeBtn && langDropdown) {
+    // Ouvrir / fermer au clic sur le globe
+    langGlobeBtn.addEventListener("click", e => {
+      e.stopPropagation();
+      langSwitcher.classList.toggle("open");
+    });
+
+    // Fermer en cliquant ailleurs
+    document.addEventListener("click", e => {
+      if (!langSwitcher.contains(e.target)) langSwitcher.classList.remove("open");
+    });
+
+    // Choisir une langue
+    langOptions.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const lang = btn.dataset.lang;
+        currentLang = lang;
+        localStorage.setItem("language", lang);
+        applyPokeTranslation(lang);
+        updateWidgetLanguage(lang);
+        setActiveLangOption(lang);
+        langSwitcher.classList.remove("open");
+      });
+    });
+  }
+

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex - Portfolio Erwan Hoarau</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/project-detail.css">
     <script src="js/translations-widget.js" defer></script>
@@ -28,12 +29,25 @@
                 <span></span>
                 <span></span>
             </div>
-            <button id="translateBtn">
-                <span class="fi fi-fr"></span> FR → <span class="fi fi-gb"></span> EN
-            </button>
+            <!-- Sélecteur de langue -->
+            <div class="lang-switcher" id="langSwitcher">
+                <button class="lang-globe-btn" id="langGlobeBtn" aria-label="Changer de langue">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <span class="lang-current" id="langCurrent">FR</span>
+                </button>
+                <ul class="lang-dropdown" id="langDropdown">
+                    <li><button class="lang-option" data-lang="fr"><span class="fi fi-fr"></span> Français</button></li>
+                    <li><button class="lang-option" data-lang="en"><span class="fi fi-gb"></span> English</button></li>
+                    <li><button class="lang-option" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
+                </ul>
+            </div>
         </nav>
     </header>
-
     <section id="project-detail">
         <a href="index.html#projects" class="back-link">← Retour aux projets</a>
         
