@@ -13,31 +13,35 @@ const translations = {
 
     projectsTitle: "MES PROJETS",
     project1Title: "Création d'un site web",
-    project1Desc:  "Il s'agit de mon premier projet universitaire qui consistait à créer un site sans div ni flex sur le sujet de notre choix.",
+    project1Desc:  "Il s'agit de mon premier projet universitaire qui consistait à créer un site sans <strong>div</strong> ni <strong>flex</strong> sur le sujet de notre choix.",
     project1bis: "Voir les détails du projet",
     project1ter: "GitHub du projet.",
     project2Title: "Développement d'une application",
-    project2Desc:  "Il s'agit d'un projet universitaire où l'on devait à l'aide d'un cahier des charges produire une application Qt fonctionnel.",
+    project2Desc:  "Il s'agit d'un projet universitaire où l'on devait à l'aide d'un cahier des charges produire une application <strong>Qt</strong> fonctionnelle en <strong>C++</strong>.",
     project2bis: "Voir les détails du projet",
     project2ter: "GitHub du projet.",
     project3Title: "Création d'un algorithme de recherche du plus court chemin",
-    project3Desc:  "Il s'agit d'un projet universitaire où l'on devait trouver le plus court chemin entre différents points grâce aux différents algorithmes (Dijkstra, A*, Bellman-Ford) codé en python.",
+    project3Desc:  "Il s'agit d'un projet universitaire où l'on devait trouver le plus court chemin entre différents points grâce aux algorithmes <strong>Dijkstra</strong>, <strong>A*</strong> et <strong>Bellman-Ford</strong> codés en <strong>Python</strong>.",
     project3bis: "Voir les détails du projet",
     project3ter: "GitHub du projet.",
     project4Title: "Développement d'un site web grâce à un cahier des charges",
-    project4Desc:  "Il s'agit d'un autre projet universitaire qui consiste à produire un cahier des charges dans un premier temps (ce que l'on a fait en 1ère année) puis dans un second temps produire un site web fonctionnel (ce que l'on fait en 2ème année).",
+    project4Desc:  "Projet universitaire en deux phases : rédaction du cahier des charges (1ère année) puis développement du site en <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>PHP</strong> et <strong>MySQL</strong> (2ème année).",
     project4bis: "Voir les détails du projet",
     project4ter: "Site web du projet.",
-    project5Title: "Projet universitaire d'un site web en PHP",
-    project5Desc:  "Il s'agit d'un projet universitaire qui consiste à créer un site web en PHP avec une base de données SQL.",
+    project5Title: "Projet universitaire d'un site web en <strong>PHP</strong>",
+    project5Desc:  "Il s'agit d'un projet universitaire qui consiste à créer un site web en <strong>PHP</strong> avec une base de données <strong>SQL</strong>.",
     project5bis: "Voir les détails du projet",
     project5ter: "Site web du projet.",
     project6Title: "Création d'un site web Pokédex",
-    project6Desc:  "Il s'agit d'un projet personnel qui consiste à créer un Pokédex en utilisant une base de données qui provient de base d'un excel trouvé sur internet, mais ne le trouvant pas si pratique j'ai décidé de le passer en base de données SQL et d'en faire un site à part entière.",
+    project6Desc:  "Projet personnel : conversion d'une base de données Excel en base <strong>SQL</strong>, puis développement d'un site complet en <strong>PHP</strong>, <strong>MySQL</strong>, <strong>HTML</strong>, <strong>CSS</strong> et <strong>JavaScript</strong>.",
     project6bis: "Voir les détails du projet",
     project6ter: "Projet bientôt disponible !",
 
     competencesTitle: "MES COMPÉTENCES",
+    skillsWeb: "Web",
+    skillsDb: "Base de données",
+    skillsProg: "Programmation",
+    skillsTools: "Outils",
     btnLabel: "FR → EN",
   },
   en: {
@@ -53,31 +57,35 @@ const translations = {
 
     projectsTitle: "PROJECTS",
     project1Title: "Website Creation",
-    project1Desc:  "This was my first university project, which consisted of creating a website without divs or flexbox on a topic of our choice.",
+    project1Desc:  "This was my first university project, which consisted of creating a website without <strong>divs</strong> or <strong>flexbox</strong> on a topic of our choice.",
     project1bis: "See project details",
     project1ter: "GitHub of the project.",
     project2Title: "Application Development",
-    project2Desc:  "This was a university project where we had to develop a functional Qt application based on a specifications document.",
+    project2Desc:  "This was a university project where we had to develop a functional <strong>Qt</strong> application in <strong>C++</strong> based on a specifications document.",
     project2bis: "See project details",
     project2ter: "GitHub of the project.",
     project3Title: "Shortest Path Search Algorithm",
-    project3Desc:  "This was a university project where we had to find the shortest path between different points using algorithms (Dijkstra, A*, Bellman-Ford) coded in Python.",
+    project3Desc:  "This was a university project where we had to find the shortest path between different points using <strong>Dijkstra</strong>, <strong>A*</strong> and <strong>Bellman-Ford</strong> algorithms coded in <strong>Python</strong>.",
     project3bis: "See project details",
     project3ter: "GitHub of the project.",
     project4Title: "Website Development from a Specifications Document",
-    project4Desc:  "Another university project where we first created a specifications document (in the first year) and then developed a functional website (in the second year).",
+    project4Desc:  "Two-phase university project: writing the specifications (year 1) then building the site in <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>PHP</strong> and <strong>MySQL</strong> (year 2).",
     project4bis: "See project details",
     project4ter: "Website of the project.",
-    project5Title: "University PHP Website Project",
-    project5Desc:  "This was a university project that involved creating a PHP website with an SQL database.",
+    project5Title: "University <strong>PHP</strong> Website Project",
+    project5Desc:  "A university project consisting of creating a website in <strong>PHP</strong> with an <strong>SQL</strong> database.",
     project5bis: "See project details",
     project5ter: "Website of the project.",
     project6Title: "Pokédex Website Creation",
-    project6Desc:  "This is a personal project that involves creating a Pokédex using a database originally from an Excel file found online. Finding it impractical, I decided to convert it to an SQL database and create a standalone website.",
+    project6Desc:  "Personal project: converting an Excel database to <strong>SQL</strong>, then building a full site in <strong>PHP</strong>, <strong>MySQL</strong>, <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>.",
     project6bis: "See project details",
     project6ter: "Project coming soon!",
 
     competencesTitle: "SKILLS",
+    skillsWeb: "Web",
+    skillsDb: "Database",
+    skillsProg: "Programming",
+    skillsTools: "Tools",
     btnLabel: "EN → FR",
   }
 };
@@ -142,6 +150,15 @@ function applyTranslation(lang) {
   // Section compétences
   const skillsH2 = document.querySelector("#skills h2");
   if (skillsH2) skillsH2.innerHTML = t.competencesTitle;
+
+  // Titres des cartes compétences (EN uniquement, FR est déjà dans le HTML)
+  const skillCardHeaders = document.querySelectorAll(".skill-card-header h3");
+  if (t.skillsWeb && skillCardHeaders.length >= 4) {
+    skillCardHeaders[0].innerHTML = t.skillsWeb;
+    skillCardHeaders[1].innerHTML = t.skillsDb;
+    skillCardHeaders[2].innerHTML = t.skillsProg;
+    skillCardHeaders[3].innerHTML = t.skillsTools;
+  }
 }
 
 // ── État courant ─────────────────────────────────────────────────────────────
@@ -198,15 +215,38 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach(s => observer.observe(s));
   }
 
-  // ── Menu burger ───────────────────────────────────────────────────────────
+  // ── Menu burger + smooth scroll ──────────────────────────────────────────
   const menuToggle = document.getElementById("menuToggle");
   const navLinks   = document.querySelector("header nav ul");
   if (menuToggle && navLinks) {
     menuToggle.addEventListener("click", () => navLinks.classList.toggle("active"));
-    document.querySelectorAll("header nav ul li a").forEach(link => {
-      link.addEventListener("click", () => navLinks.classList.remove("active"));
-    });
   }
+
+  // Smooth scroll avec offset pour compenser le header fixe
+  document.querySelectorAll("header nav ul li a, a[href^='index.html#'], a[href^='#']").forEach(link => {
+    link.addEventListener("click", e => {
+      // Fermer le menu mobile
+      if (navLinks) navLinks.classList.remove("active");
+
+      const href = link.getAttribute("href") || "";
+      const hashIndex = href.indexOf("#");
+      if (hashIndex === -1) return; // lien externe, laisser le navigateur gérer
+
+      // Si on est déjà sur index.html ou lien interne pur (#...)
+      const isCurrentPage = href.startsWith("#") || href.startsWith("index.html");
+      if (!isCurrentPage) return;
+
+      const targetId = href.slice(hashIndex + 1);
+      const target   = document.getElementById(targetId);
+      if (!target) return;
+
+      e.preventDefault();
+      const headerHeight = document.querySelector("header")?.offsetHeight || 80;
+      const targetTop    = target.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+
+      window.scrollTo({ top: targetTop, behavior: "smooth" });
+    });
+  });
 
   // ── Animation des cartes au scroll ────────────────────────────────────────
   const cards = document.querySelectorAll(".project-card");
@@ -273,6 +313,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   window.addEventListener("scroll", animateSkills);
+
+  // ── Animation des items de timeline au scroll ─────────────────────────────
+  const timelineItems = document.querySelectorAll(".timeline-item");
+  if (timelineItems.length) {
+    const timelineObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add("visible"), i * 120);
+            timelineObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -80px 0px", threshold: 0.1 }
+    );
+    timelineItems.forEach(item => timelineObserver.observe(item));
+  }
 
   // ── Widget Feedeko ─────────────────────────────────────────────────────────
   // Appliquer la langue au widget après son chargement
