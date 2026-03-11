@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://www.erwanhoarau.com/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.erwanhoarau.com/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.erwanhoarau.com/?lang=en"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Projet - Site web -->
+  <url>
+    <loc>https://www.erwanhoarau.com/projet-site-web.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.erwanhoarau.com/projet-site-web.html?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.erwanhoarau.com/projet-site-web.html?lang=en"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Projet - Application -->
+  <url>
+    <loc>https://www.erwanhoarau.com/projet-application.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.erwanhoarau.com/projet-application.html?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.erwanhoarau.com/projet-application.html?lang=en"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Projet - Algorithme -->
+  <url>
+    <loc>https://www.erwanhoarau.com/projet-algorithme.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.erwanhoarau.com/projet-algorithme.html?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.erwanhoarau.com/projet-algorithme.html?lang=en"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Projet - Paaxio -->
+  <url>
+    <loc>https://www.erwanhoarau.com/projet-paaxio.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.erwanhoarau.com/projet-paaxio.html?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.erwanhoarau.com/projet-paaxio.html?lang=en"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Projet - PcSelling -->
+  <url>
+    <loc>https://www.erwanhoarau.com/projet-pcselling.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.erwanhoarau.com/projet-pcselling.html?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.erwanhoarau.com/projet-pcselling.html?lang=en"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Projet - Pokédex -->
+  <url>
+    <loc>https://www.erwanhoarau.com/projet-pokedex.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.erwanhoarau.com/projet-pokedex.html?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.erwanhoarau.com/projet-pokedex.html?lang=en"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

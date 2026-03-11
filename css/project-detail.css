@@ -1,163 +1,309 @@
-/* Styles communs pour les pages détails */
+/* ══════════════════════════════════════════════════════════
+   PROJECT DETAIL — styles spécifiques aux pages de projet
+   (réutilise les variables de style.css)
+══════════════════════════════════════════════════════════ */
+
+/* ── Layout principal ────────────────────────────────────── */
+#project-detail {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
 
 .detail-content {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+/* ── Lien retour ─────────────────────────────────────────── */
 .back-link {
-    display: inline-block;
-    margin-bottom: 30px;
-    color: #e254f4;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 36px;
+  color: #e254f4;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(226, 84, 244, 0.3);
+  background: rgba(226, 84, 244, 0.06);
+  transition:
+    color 0.3s,
+    background 0.3s,
+    border-color 0.3s,
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-
 .back-link:hover {
-    color: #a5baee;
+  color: #fff;
+  background: rgba(226, 84, 244, 0.15);
+  border-color: rgba(226, 84, 244, 0.6);
+  transform: translateX(-4px);
 }
 
-.detail-img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+/* ── Titres ──────────────────────────────────────────────── */
+#project-detail h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: left;
 }
+/* Pas de trait centré sur les pages de détail */
+#project-detail h2::after { margin: 10px 0 0; }
 
-.gallery {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
-
-.gallery .detail-img {
-    flex: 1;
-    min-width: 250px;
+.subtitle {
+  color: #a5baee;
+  font-size: 1.05rem;
+  margin-top: -8px;
+  margin-bottom: 32px;
+  font-weight: 400;
 }
 
 #project-detail h3 {
-    color: #a5baee;
-    margin-top: 30px;
-    margin-bottom: 15px;
+  color: #a5baee;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 36px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(165, 186, 238, 0.2);
 }
 
 #project-detail h4 {
-    color: #a5baee;
-    margin-bottom: 10px;
+  color: #e254f4;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
+/* ── Listes ──────────────────────────────────────────────── */
 #project-detail ul {
-    margin-left: 20px;
-    line-height: 1.8;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  line-height: 1.9;
 }
-
 #project-detail li {
-    margin-bottom: 10px;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+  color: rgba(247, 243, 243, 0.9);
+  font-size: 0.95rem;
+}
+#project-detail li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #e254f4;
+  font-size: 0.8rem;
+  top: 3px;
 }
 
-.subtitle {
-    color: #a5baee;
-    font-size: 1.2rem;
-    margin-top: -20px;
-    margin-bottom: 30px;
+/* ── Images ──────────────────────────────────────────────── */
+.detail-img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.4),
+    0 0 0 1px rgba(255,255,255,0.07);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+.detail-img:hover {
+  transform: scale(1.01);
+  box-shadow:
+    0 12px 40px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(226, 84, 244, 0.3);
 }
 
+.gallery {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.gallery .detail-img {
+  flex: 1;
+  min-width: 240px;
+  margin-bottom: 0;
+}
+
+/* ── Tech tags ───────────────────────────────────────────── */
 .tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
 }
-
 .tech-tags span {
-    background: rgba(162, 90, 233, 0.2);
-    border: 1px solid rgba(162, 90, 233, 0.5);
-    padding: 8px 15px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  background: rgba(162, 90, 233, 0.12);
+  border: 1px solid rgba(162, 90, 233, 0.4);
+  padding: 7px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.3s, border-color 0.3s, transform 0.25s;
+}
+.tech-tags span:hover {
+  background: rgba(162, 90, 233, 0.25);
+  border-color: rgba(162, 90, 233, 0.7);
+  transform: translateY(-2px);
 }
 
+/* ── Boutons projet ──────────────────────────────────────── */
 .project-links {
-    margin-top: 40px;
-    display: flex;
-    gap: 15px;
+  margin-top: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
 .btn-github {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #2b2b2b 0%, #1a1a1a 100%);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+  transition:
+    background 0.3s,
+    transform 0.25s cubic-bezier(0.34,1.56,0.64,1),
+    box-shadow 0.3s,
+    border-color 0.3s;
+  position: relative;
+  overflow: hidden;
 }
-
+.btn-github::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.4s;
+}
+.btn-github:hover::before { left: 150%; }
 .btn-github:hover {
-    background: #e254f4;
+  transform: translateY(-3px);
+  border-color: rgba(226, 84, 244, 0.45);
+  box-shadow: 0 8px 24px rgba(226, 84, 244, 0.2);
 }
 
-/* Styles spécifiques pour les algorithmes */
+/* ── Cartes algo ─────────────────────────────────────────── */
 .algorithms {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    margin: 15px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 16px 0;
 }
-
 .algo-card {
-    background: rgba(162, 90, 233, 0.1);
-    border: 1px solid rgba(162, 90, 233, 0.3);
-    padding: 15px;
-    border-radius: 8px;
+  background: rgba(162, 90, 233, 0.08);
+  border: 1px solid rgba(162, 90, 233, 0.25);
+  padding: 18px 20px;
+  border-radius: 10px;
+  transition: background 0.3s, border-color 0.3s, transform 0.25s;
 }
-
+.algo-card:hover {
+  background: rgba(162, 90, 233, 0.15);
+  border-color: rgba(162, 90, 233, 0.5);
+  transform: translateX(4px);
+}
 .algo-card p {
-    margin: 0;
+  margin: 0;
+  font-size: 0.92rem;
+  color: rgba(247,243,243,0.85);
 }
 
-/* Styles spécifiques pour SoundRise */
+/* ── Phase info ──────────────────────────────────────────── */
 .phase-info {
-    background: rgba(162, 90, 233, 0.1);
-    border-left: 4px solid #a5baee;
-    padding: 15px;
-    border-radius: 5px;
-    margin: 15px 0;
+  background: rgba(162, 90, 233, 0.07);
+  border-left: 3px solid #a5baee;
+  padding: 18px 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0;
 }
 
+/* ── Statut projet ───────────────────────────────────────── */
+.project-status,
+.project-statut {
+  background: rgba(162, 90, 233, 0.08);
+  border: 1px solid rgba(162, 90, 233, 0.25);
+  padding: 18px 20px;
+  border-radius: 10px;
+  margin: 16px 0;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* ── Texte descriptions ──────────────────────────────────── */
+.project-description,
+.project-concept,
+.learnings-text,
+.learnings-description,
+.phase-info-2 {
+  font-size: 0.97rem;
+  line-height: 1.75;
+  color: rgba(247,243,243,0.9);
+}
+
+/* ── Feature cards grid ──────────────────────────────────── */
 .features {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 20px 0;
 }
-
 .feature-card {
-    background: rgba(162, 90, 233, 0.1);
-    border: 1px solid rgba(162, 90, 233, 0.3);
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
+  background: rgba(162, 90, 233, 0.08);
+  border: 1px solid rgba(162, 90, 233, 0.25);
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+  transition: background 0.3s, border-color 0.3s;
 }
-
-.feature-card p {
-    margin: 0;
+.feature-card:hover {
+  background: rgba(162, 90, 233, 0.18);
+  border-color: rgba(162, 90, 233, 0.5);
 }
+.feature-card p { margin: 0; font-size: 0.9rem; }
 
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════════════ */
 @media (max-width: 600px) {
-    .features {
-        grid-template-columns: 1fr;
-    }
-    
-    .gallery {
-        flex-direction: column;
-    }
-    
-    .gallery .detail-img {
-        min-width: 100%;
-    }
+  #project-detail { padding: 40px 16px; }
+
+  #project-detail h2 { font-size: 1.4rem; }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    flex-direction: column;
+  }
+  .gallery .detail-img {
+    min-width: 100%;
+  }
+  .project-links {
+    flex-direction: column;
+  }
+  .project-links .btn-github,
+  .project-links a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }

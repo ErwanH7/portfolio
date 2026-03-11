@@ -4,26 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+         SEO : hreflang — indique à Google les deux versions linguistiques
+         ════════════════════════════════════════════════════════════════════════ -->
+    <link rel="alternate" hreflang="fr" href="https://www.erwanhoarau.com/?lang=fr">
+    <link rel="alternate" hreflang="en" href="https://www.erwanhoarau.com/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://www.erwanhoarau.com/">
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+         lang.js DOIT être chargé EN PREMIER, sans defer, pour masquer le body
+         avant le premier rendu et éviter tout flash de traduction.
+         ════════════════════════════════════════════════════════════════════════ -->
+    <script src="js/lang.js"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/translations-widget.js" defer></script>
     <script src="https://feedeko.timdidelot.fr/widget.js" data-api-key="fw_d02bd7165bea4b718150eff1a589397d" defer></script>
-    <!-- Structured Data -->
+
+    <!-- Structured Data (FR) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
         "familyName": "Hoarau",
-	    "givenName": "Erwan",
+        "givenName": "Erwan",
         "alumniOf": "https://www.iutbayonne.univ-pau.fr/",
         "name": "Erwan HOARAU",
         "image": "https://media.licdn.com/dms/image/v2/D5603AQEisLMA7Y-ifg/profile-displayphoto-shrink_800_800/B56ZUSvaYVHQAc-/0/1739776174214?e=1774483200&v=beta&t=pmAJCnV8ZyoOB7FC_0-0ZlFG85uECTx3DPpAsrhOt_Y",
-        "description": "Étudiant à l'IUT informatique de Anglet",
+        "description": "Computer science student at IUT de Bayonne et du Pays Basque / Étudiant en informatique à l'IUT de Bayonne et du Pays Basque",
         "url": "https://www.erwanhoarau.com",
         "email": "ehoarau003@iutbayonne.univ-pau.fr",
         "sameAs": ["https://wikidata.timdidelot.fr/wiki/Q317526", "https://www.linkedin.com/in/erwan-hoarau/", "https://github.com/ErwanH7"],
-        "jobTitle": ["Étudiant en informatique"],
+        "jobTitle": ["Étudiant en informatique", "Computer Science Student"],
         "worksFor": [
            {
                 "@type": "Organization",
@@ -40,11 +55,18 @@
         "knowsAbout": ["Python", "C++", "C", "Java", "Web Development", "SQL", "Git"]
     }
     </script>
-    <meta property="og:title" content="Mon Portfolio - Erwan Hoarau">
-    <meta property="og:image" content="/image/logo.png">
-    <meta property="og:image:width" content="1200"/>
-	<meta property="og:image:height" content="630"/>
-    <meta property="og:type" content="website"/>
+
+    <!-- Open Graph (bilingual) -->
+    <meta property="og:title"        content="Portfolio - Erwan Hoarau">
+    <meta property="og:description"  content="Étudiant en informatique à l'IUT de Bayonne — Computer science student">
+    <meta property="og:image"        content="/image/logo.png">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type"         content="website">
+    <meta property="og:url"          content="https://www.erwanhoarau.com/">
+    <meta property="og:site_name"    content="Portfolio - Erwan Hoarau">
+    <meta property="og:locale"       content="fr_FR">
+    <meta property="og:locale:alternate" content="en_GB">
 </head>
 <body>
     <header>
@@ -56,7 +78,6 @@
                 <li><a href="index.html#about">MON PARCOURS</a></li>
                 <li><a href="index.html#projects">PROJETS</a></li>
                 <li><a href="index.html#skills">COMPÉTENCES</a></li>
-                <li><a href="index.html#contact">CONTACT</a></li>
             </ul>
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
@@ -64,14 +85,12 @@
                 <span></span>
                 <span></span>
             </div>
-            <button id="translateBtn">
-                FR → EN
-            </button>
+            <button id="translateBtn">FR → EN</button>
         </nav>
     </header>
 
     <section id="about">
-        <h2>À propos de moi</h2>
+        <h2>MON PARCOURS NUMÉRIQUE</h2>
         <p>
             Bonjour, je m'appelle <strong>Hoarau Erwan</strong> et je suis actuellement étudiant en <strong>informatique à l'IUT de Bayonne et du Pays Basque.</strong>
         </p>
@@ -85,7 +104,7 @@
     </section>
 
     <section id="projects">
-        <h2>Mes projets</h2>
+        <h2>MES PROJETS</h2>
         <div class="projects-container">
             <div class="project-card">
                 <img src="image/web1.png" alt="Projet_1">
@@ -97,7 +116,7 @@
             <div class="project-card">
                 <img src="image/app1.png" alt="image_1_projet_2">
                 <img src="image/app2.png" alt="image_2_projet_2">
-                <h3>Développement d’une application</h3>
+                <h3>Développement d'une application</h3>
                 <p>Il s'agit d'un projet universitaire où l'on devait à l'aide d'un cahier des charges produire une application Qt fonctionnel.</p>
                 <a href="projet-application.html" class="btn btn-secondary">Voir les détails du projet</a>
                 <a href="https://github.com/ErwanH7/S2.01" class="btn btn-github">GitHub du projet.</a>
@@ -105,8 +124,8 @@
             <div class="project-card">
                 <img src="image/algo_py1.png" alt="image_1_projet_3">
                 <img src="image/algo_py2.png" alt="image_2_projet_3">
-                <h3>Création d'un algorithme de recherche du plus cours chemin</h3>
-                <p>Il s'agit d'un projet universitaire où l'on devait trouver le plus cours chemin entre différents points grâce aux différents 
+                <h3>Création d'un algorithme de recherche du plus court chemin</h3>
+                <p>Il s'agit d'un projet universitaire où l'on devait trouver le plus court chemin entre différents points grâce aux différents 
                     algorithmes (Dijkstra, A*, Bellman-Ford) codé en python.
                 </p>
                 <a href="projet-algorithme.html" class="btn btn-secondary">Voir les détails du projet</a>
@@ -130,47 +149,48 @@
             </div>
             <div class="project-card">
                 <img src="image/projetPokedex.png" alt="Projet_6">
-                <h3>Création d'un site web Pokédex </h3>
+                <h3>Création d'un site web Pokédex</h3>
                 <p>Il s'agit d'un projet personnel qui consiste à créer un Pokédex en utilisant 
                     une base de données qui provient de base d'un excel trouvé sur internet, mais ne le trouvant pas 
                     si pratique j'ai décidé de le passer en base de données SQL et d'en faire un site a part entière.</p>
                 <a href="projet-pokedex.html" class="btn btn-secondary">Voir les détails du projet</a>
                 <a href="#" class="btn btn-primary">Projet bientôt disponible !</a>
             </div>
-            </div>
+        </div>
     </section>
 
     <section id="skills">
-        <h2>Mes Compétences</h2>
+        <h2>MES COMPÉTENCES</h2>
         <div class="skills-container">
             <div class="skill">
-            <span><i class="devicon-html5-plain colored"></i> HTML / CSS <i class="devicon-css3-plain colored"></i></span>
-            <div class="progress-bar">
-                <div class="progress" data-value="80"></div>
-            </div>
-            </div>
-            <div class="skill">
-            <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-            <div class="progress-bar">
-                <div class="progress" data-value="55"></div>
-            </div>
+                <span><i class="devicon-html5-plain colored"></i> HTML / CSS <i class="devicon-css3-plain colored"></i></span>
+                <div class="progress-bar">
+                    <div class="progress" data-value="80"></div>
+                </div>
             </div>
             <div class="skill">
-            <span><i class="devicon-python-plain colored"></i> Python</span>
-            <div class="progress-bar">
-                <div class="progress" data-value="40"></div>
-            </div>
-            </div>
-            <div class="skill">
-            <span><i class="devicon-mysql-plain colored"></i> SQL</span>
-            <div class="progress-bar">
-                <div class="progress" data-value="80"></div>
-            </div>
+                <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                <div class="progress-bar">
+                    <div class="progress" data-value="55"></div>
+                </div>
             </div>
             <div class="skill">
-            <span><i class="devicon-php-plain colored"></i> PHP</span>
-            <div class="progress-bar">
-                <div class="progress" data-value="60"></div>
+                <span><i class="devicon-python-plain colored"></i> Python</span>
+                <div class="progress-bar">
+                    <div class="progress" data-value="40"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span><i class="devicon-mysql-plain colored"></i> SQL</span>
+                <div class="progress-bar">
+                    <div class="progress" data-value="80"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span><i class="devicon-php-plain colored"></i> PHP</span>
+                <div class="progress-bar">
+                    <div class="progress" data-value="60"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -179,6 +199,6 @@
         <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
