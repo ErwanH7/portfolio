@@ -52,15 +52,18 @@
         
         <h2>Création d'un site web Pokédex</h2>
         <h3 class="subtitle">Projet personnel avec base de données SQL</h3>
-        
+
         <div class="detail-content">
-            <img src="image/projetPokedex.png" alt="Logo Pokédex" class="detail-img">
-            
+            <img src="image/logo_pokedex.svg" alt="Logo Pokédex" class="detail-img">
+
             <h3>Description du projet</h3>
             <p class="project-description">
-                Ce projet personnel m'a permis de créer un <strong>Pokédex complet</strong> - une application web pour consulter 
-                les informations des Pokémon. Le projet a débuté à partir d'une base de données Excel trouvée sur Internet, 
+                Ce projet personnel m'a permis de créer un <strong>Pokédex complet</strong> - une application web pour consulter
+                et suivre les informations des Pokémon. Le projet a débuté à partir d'une base de données Excel trouvée sur Internet,
                 que j'ai ensuite transformée en <strong>base de données SQL</strong> pour en faire un véritable site web fonctionnel.
+                Face aux limites des exports CSV (données trop complexes, formats incohérents, impossible à exploiter correctement),
+                j'ai dû chercher une alternative et j'ai découvert <strong>PokéAPI</strong> (pokeapi.co), une API publique complète
+                que j'ai intégrée pour alimenter automatiquement la base de données via un panel d'administration dédié.
             </p>
 
             <h3>Évolution du projet</h3>
@@ -69,7 +72,12 @@
                     <li>Découverte d'une base de données Pokémon en Excel</li>
                     <li>Conversion en base de données SQL structurée</li>
                     <li>Développement du site web de consultation</li>
-                    <li>Ajout de fonctionnalités avancées</li>
+                    <li>Ajout de fonctionnalités avancées (suivi des captures, formes, versions chromatiques)</li>
+                    <li>Les exports CSV se révèlent trop complexes et impossibles à exploiter correctement -> recherche d'une alternative</li>
+                    <li>Découverte et intégration de <strong>PokéAPI</strong> pour importer les données automatiquement</li>
+                    <li>Développement du panel admin pour piloter les imports depuis PokéAPI</li>
+                    <li>Mise en place du système d'authentification (inscription, connexion, profil utilisateur)</li>
+                    <li>Ajout de la synchronisation automatique Pokédex régional -> National</li>
                     <li>Optimisation et amélioration continue</li>
                 </ul>
             </div>
@@ -81,6 +89,7 @@
                 <li>Implémenter des fonctionnalités de recherche et filtrage</li>
                 <li>Créer une interface utilisateur ergonomique</li>
                 <li>Améliorer les performances de consultation de données</li>
+                <li>Permettre à chaque utilisateur de suivre sa propre collection sur plusieurs Pokédex régionaux</li>
             </ul>
 
             <h3>Technologies utilisées</h3>
@@ -88,16 +97,19 @@
                 <span><i class="devicon-php-plain colored"></i> PHP</span>
                 <span><i class="devicon-mysql-plain colored"></i> MySQL/SQL</span>
                 <span><i class="devicon-html5-plain colored"></i> HTML5</span>
-                <span><i class="devicon-css3-plain colored"></i> CSS3</span>
-                <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                <span><i class="devicon-css3-plain colored"></i> CSS3 / Bootstrap</span>
+                <span><i class="devicon-javascript-plain colored"></i> JavaScript ES6</span>
             </div>
 
             <h3>Fonctionnalités principales</h3>
             <ul class="features-list">
                 <li>Catalogue complet de tous les Pokémon</li>
-                <li>Recherche par nom, type ou génération</li>
-                <li>Sélectionner les pokémon attrapés</li>
-                <li>Comparaison de Pokédex (selon le nombre de pokémon attrapés)</li>
+                <li>Recherche par nom (français, anglais, allemand)</li>
+                <li>Sélectionner les Pokémon attrapés (version normale et chromatique)</li>
+                <li>Gestion des multi-formes (Méga évolutions, Gigamax, formes genrées, formes régionales…)</li>
+                <li>Synchronisation automatique : cocher un Pokémon dans un Pokédex régional met à jour le National</li>
+                <li>Système d'authentification complet (inscription, connexion, modification du profil)</li>
+                <li>Panel admin pour importer les données depuis PokéAPI ou via fichier CSV/JSON</li>
                 <li>Interface responsive et intuitive</li>
             </ul>
 
@@ -107,38 +119,43 @@
                 <li>Requêtes SQL optimisées pour les performances</li>
                 <li>Interface utilisateur attrayante et facile à utiliser</li>
                 <li>Recherche et filtrage rapides et précis</li>
+                <li>Mises à jour en temps réel via AJAX sans rechargement de page</li>
                 <li>Code modulaire et extensible</li>
             </ul>
 
             <h3>Défis techniques</h3>
             <ul class="challenges-list">
                 <li>Structuration efficace d'une grande base de données</li>
-                <li>Optimisation des requêtes pour les performances</li>
-                <li>Implémentation de recherche multi-critères</li>
-                <li>Gestion des images (plusieurs par Pokémon)</li>
+                <li>Les CSV ne pouvaient pas être exportés correctement (données trop complexes) -> migration vers PokéAPI</li>
+                <li>Modélisation des multi-formes Pokémon (identifiants composites : "25", "25_m", "25_mega"…)</li>
+                <li>Logique de synchronisation unidirectionnelle Pokédex régional -> National</li>
+                <li>Implémentation de la recherche multi-critères en temps réel</li>
+                <li>Gestion des images (plusieurs sprites par Pokémon : normal, chromatique, formes)</li>
                 <li>Responsive design pour tous les appareils</li>
             </ul>
 
             <h3>Apprentissages</h3>
             <p class="learnings-description">
-                Ce projet personnel m'a permis d'approfondir mes compétences en:
+                Ce projet personnel m'a permis d'approfondir mes compétences en :
             </p>
             <ul class="learnings-list">
                 <li>Conversion et structuration de données existantes</li>
                 <li>Conception de bases de données relationnelles complexes</li>
                 <li>Optimisation des performances avec SQL</li>
+                <li>Consommation et intégration d'une API externe (PokéAPI)</li>
                 <li>Développement personnel et apprentissage autonome</li>
-                <li>Créativité dans l'implémentation d'une idée</li>
+                <li>Créativité dans l'implémentation d'une idée et résolution de problèmes concrets</li>
             </ul>
 
             <h3>État du projet</h3>
             <p style="background: rgba(162, 90, 233, 0.1); padding: 15px; border-radius: 8px; margin: 15px 0;" class="project-statut">
                 <strong>Statut : </strong> Projet personnel en développement continu<br>
-                <strong>Disponibilité : </strong> Bientôt disponible en ligne
+                <strong>Disponibilité : </strong> Disponible en ligne
             </p>
 
             <div class="project-links">
-                <a href="#" class="btn-github" style="opacity: 0.6; cursor: not-allowed;">Lien (à venir)</a>
+                <a href="https://projet-pokedex.erwanhoarau.com" class="btn-website" target="_blank" rel="noopener">Voir le site</a>
+                <a href="https://github.com/ErwanH7/projet-pokedex" class="btn-github" target="_blank" rel="noopener">Voir sur GitHub</a>
             </div>
         </div>
     </section>

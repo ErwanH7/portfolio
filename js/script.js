@@ -45,7 +45,7 @@ const translations = {
     project6Title: "Création d'un site web Pokédex",
     project6Desc:  "Projet personnel : conversion d'une base de données Excel en base <strong>SQL</strong>, puis développement d'un site complet en <strong>PHP</strong>, <strong>MySQL</strong>, <strong>HTML</strong>, <strong>CSS</strong> et <strong>JavaScript</strong>.",
     project6bis: "Voir les détails du projet",
-    project6ter: "Projet bientôt disponible !",
+    project6ter: "Voir le site",
 
     competencesTitle: "MES COMPÉTENCES",
     skillsWeb:   "Web",
@@ -100,7 +100,7 @@ const translations = {
     project6Title: "Pokédex Website Creation",
     project6Desc:  "Personal project: converting an Excel database to <strong>SQL</strong>, then building a full site in <strong>PHP</strong>, <strong>MySQL</strong>, <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>.",
     project6bis: "See project details",
-    project6ter: "Project coming soon!",
+    project6ter: "Visit the site",
 
     competencesTitle: "SKILLS",
     skillsWeb:   "Web",
@@ -155,7 +155,7 @@ const translations = {
     project6Title: "Creación de un sitio web Pokédex",
     project6Desc:  "Proyecto personal: conversión de una base de datos Excel a <strong>SQL</strong>, luego desarrollo de un sitio completo en <strong>PHP</strong>, <strong>MySQL</strong>, <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong>.",
     project6bis: "Ver detalles del proyecto",
-    project6ter: "¡Proyecto próximamente disponible!",
+    project6ter: "Ver el sitio",
 
     competencesTitle: "MIS HABILIDADES",
     skillsWeb:   "Web",
