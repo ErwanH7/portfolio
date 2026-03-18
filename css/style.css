@@ -194,7 +194,7 @@ section {
   margin: 0 auto;
 }
 
-h2 {
+h1, h2 {
   margin-bottom: 30px;
   text-align: center;
   font-size: 1.6rem;
@@ -204,7 +204,7 @@ h2 {
 }
 
 /* Trait décoratif sous les titres de section */
-h2::after {
+h1::after, h2::after {
   content: "";
   display: block;
   width: 60px;

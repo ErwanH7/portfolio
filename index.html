@@ -11,8 +11,10 @@
          ════════════════════════════════════════════════════════════════════════ -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://feedeko.timdidelot.fr">
+    <link rel="canonical" href="https://www.erwanhoarau.com/">
     <link rel="alternate" hreflang="fr" href="https://www.erwanhoarau.com/?lang=fr">
     <link rel="alternate" hreflang="en" href="https://www.erwanhoarau.com/?lang=en">
+    <link rel="alternate" hreflang="es" href="https://www.erwanhoarau.com/?lang=es">
     <link rel="alternate" hreflang="x-default" href="https://www.erwanhoarau.com/">
 
     <!-- ════════════════════════════════════════════════════════════════════════
@@ -36,7 +38,7 @@
         "givenName": "Erwan",
         "alumniOf": "https://www.iutbayonne.univ-pau.fr/",
         "name": "Erwan HOARAU",
-        "image": "https://media.licdn.com/dms/image/v2/D5603AQEisLMA7Y-ifg/profile-displayphoto-shrink_800_800/B56ZUSvaYVHQAc-/0/1739776174214?e=1774483200&v=beta&t=pmAJCnV8ZyoOB7FC_0-0ZlFG85uECTx3DPpAsrhOt_Y",
+        "image": "https://www.erwanhoarau.com/image/logo.png",
         "description": "Computer science student at IUT de Bayonne et du Pays Basque / Étudiant en informatique à l'IUT de Bayonne et du Pays Basque",
         "url": "https://www.erwanhoarau.com",
         "email": "ehoarau003@iutbayonne.univ-pau.fr",
@@ -55,14 +57,14 @@
             "addressCountry": "FR"
         },
         "gender": "http://schema.org/Male",
-        "knowsAbout": ["Python", "C++", "C", "Java", "Web Development", "SQL", "Git"]
+        "knowsAbout": ["Python", "C++", "C", "Java", "HTML", "CSS", "JavaScript", "PHP", "SQL", "MySQL", "Angular", "Laravel", "Bootstrap", "Git", "Web Development"]
     }
     </script>
 
     <!-- Open Graph (bilingual) -->
     <meta property="og:title"        content="Portfolio - Erwan Hoarau">
     <meta property="og:description"  content="Étudiant en informatique à l'IUT de Bayonne — Computer science student">
-    <meta property="og:image"        content="/image/logo.png">
+    <meta property="og:image"        content="https://www.erwanhoarau.com/image/logo.png">
     <meta property="og:image:width"  content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:type"         content="website">
@@ -70,6 +72,13 @@
     <meta property="og:site_name"    content="Portfolio - Erwan Hoarau">
     <meta property="og:locale"       content="fr_FR">
     <meta property="og:locale:alternate" content="en_GB">
+    <meta property="og:locale:alternate" content="es_ES">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Portfolio - Erwan Hoarau">
+    <meta name="twitter:description" content="Étudiant en informatique à l'IUT de Bayonne — projets web, algorithmique et développement applicatif.">
+    <meta name="twitter:image"       content="https://www.erwanhoarau.com/image/logo.png">
 </head>
 <body>
     <header>
@@ -108,7 +117,7 @@
     </header>
 
     <section id="about">
-        <h2>PRÉSENTATION</h2>
+        <h1>PRÉSENTATION</h1>
         <p class="section-subtitle" id="aboutSubtitle">MON PARCOURS NUMÉRIQUE</p>
         <p style="text-align:center;">
             Bonjour, je m'appelle <strong>Hoarau Erwan</strong> et je suis actuellement étudiant en <strong>informatique à l'IUT de Bayonne et du Pays Basque.</strong>
@@ -158,44 +167,44 @@
         <h2>MES PROJETS</h2>
         <div class="projects-container">
             <div class="project-card">
-                <img src="image/web1.png" alt="Projet_1" width="852" height="451" loading="lazy">
+                <img src="image/web1.png" alt="Capture du projet site web universitaire HTML/CSS" width="852" height="451" loading="lazy">
                 <h3>Création d'un site web</h3>
                 <p>Il s'agit de mon premier projet universitaire qui consistait à créer un site sans <strong>div</strong> ni <strong>flex</strong> sur le sujet de notre choix.</p>
                 <a href="projet-site-web.html" class="btn btn-secondary">Voir les détails du projet</a>
                 <a href="https://github.com/ErwanH7/web" class="btn btn-github">GitHub du projet.</a>
             </div>
             <div class="project-card">
-                <img src="image/app1.png" alt="image_1_projet_2" width="692" height="539" loading="lazy">
-                <img src="image/app2.png" alt="image_2_projet_2" width="702" height="539" loading="lazy">
+                <img src="image/app1.png" alt="Interface de l'application Qt C++ - vue principale" width="692" height="539" loading="lazy">
+                <img src="image/app2.png" alt="Interface de l'application Qt C++ - vue secondaire" width="702" height="539" loading="lazy">
                 <h3>Développement d'une application</h3>
                 <p>Il s'agit d'un projet universitaire où l'on devait à l'aide d'un cahier des charges produire une application <strong>Qt</strong> fonctionnelle en <strong>C++</strong>.</p>
                 <a href="projet-application.html" class="btn btn-secondary">Voir les détails du projet</a>
                 <a href="https://github.com/ErwanH7/S2.01" class="btn btn-github">GitHub du projet.</a>
             </div>
             <div class="project-card">
-                <img src="image/algo_py1.png" alt="image_1_projet_3" width="469" height="413" loading="lazy">
-                <img src="image/algo_py2.png" alt="image_2_projet_3" width="462" height="409" loading="lazy">
+                <img src="image/algo_py1.png" alt="Visualisation algorithme Dijkstra plus court chemin en Python" width="469" height="413" loading="lazy">
+                <img src="image/algo_py2.png" alt="Visualisation algorithme A* plus court chemin en Python" width="462" height="409" loading="lazy">
                 <h3>Création d'un algorithme de recherche du plus court chemin</h3>
                 <p>Il s'agit d'un projet universitaire où l'on devait trouver le plus court chemin entre différents points grâce aux algorithmes <strong>Dijkstra</strong>, <strong>A*</strong> et <strong>Bellman-Ford</strong> codés en <strong>Python</strong>.</p>
                 <a href="projet-algorithme.html" class="btn btn-secondary">Voir les détails du projet</a>
                 <a href="https://github.com/ErwanH7/S2.02" class="btn btn-github">GitHub du projet.</a>
             </div>
             <div class="project-card">
-                <img src="image/paaxio_logo_nom_down_noir.png" alt="Projet_4" class="img-logo-fit" style="height:170px;" width="1365" height="1365" loading="lazy">
+                <img src="image/paaxio_logo_nom_down_noir.png" alt="Logo Paaxio - projet site web full-stack HTML CSS JS PHP MySQL" class="img-logo-fit" style="height:170px;" width="1365" height="1365" loading="lazy">
                 <h3>Développement d'un site web grâce à un cahier des charges</h3>
                 <p>Projet universitaire en deux phases : rédaction du cahier des charges (1ère année) puis développement du site en <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>PHP</strong> et <strong>MySQL</strong> (2ème année).</p>
                 <a href="projet-paaxio.html" class="btn btn-secondary">Voir les détails du projet</a>
                 <a href="paaxio.com" class="btn btn-primary">Site web du projet.</a>
             </div>
             <div class="project-card">
-                <img src="image/pcSelling_logo.png" alt="Projet_5" class="img-logo-fit" width="114" height="45" loading="lazy">
+                <img src="image/pcSelling_logo.png" alt="Logo PCSelling - site e-commerce PHP SQL" class="img-logo-fit" width="114" height="45" loading="lazy">
                 <h3>Projet universitaire d'un site web en PHP</h3>
                 <p>Il s'agit d'un projet universitaire qui consiste à créer un site web en PHP avec une base de données SQL.</p>
                 <a href="projet-pcselling.html" class="btn btn-secondary">Voir les détails du projet</a>
                 <a href="https://pcselling.infinityfree.me/" class="btn btn-primary">Site web du projet.</a>
             </div>
             <div class="project-card">
-                <img src="image/logo_pokedex.svg" alt="Projet_6" width="200" height="200" loading="lazy">
+                <img src="image/logo_pokedex.svg" alt="Logo Pokédex - projet personnel PHP MySQL JavaScript" width="200" height="200" loading="lazy">
                 <h3>Création d'un site web Pokédex</h3>
                 <p>Projet personnel : conversion d'une base de données Excel en base <strong>SQL</strong>, puis développement d'un site complet en <strong>PHP</strong>, <strong>MySQL</strong>, <strong>HTML</strong>, <strong>CSS</strong> et <strong>JavaScript</strong>.</p>
                 <a href="projet-pokedex.html" class="btn btn-secondary">Voir les détails du projet</a>
