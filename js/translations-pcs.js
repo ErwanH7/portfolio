@@ -42,6 +42,7 @@ const translations = {
     pcsChallenge2: "Partie administration avec AJAX",
     pcsChallenge3: "Optimisation des requêtes de base de données",
     pcsBtnGitHub: "Voir sur GitHub",
+    footerText: "© 2026 Hoarau Erwan. Tous droits réservés.",
     btnLabel: "FR → EN",
   },
   en: {
@@ -82,6 +83,7 @@ const translations = {
     pcsChallenge2: "Administration part with AJAX",
     pcsChallenge3: "Optimizing database queries",
     pcsBtnGitHub: "View on GitHub",
+    footerText: "© 2026 Hoarau Erwan. All rights reserved.",
     btnLabel: "EN → ES",
   },
   es: {
@@ -122,6 +124,7 @@ const translations = {
     pcsChallenge2: "Parte de administración con AJAX",
     pcsChallenge3: "Optimización de consultas a la base de datos",
     pcsBtnGitHub: "Ver en GitHub",
+    footerText: "© 2026 Hoarau Erwan. Todos los derechos reservados.",
     btnLabel: "ES → FR",
   }
 };
@@ -199,6 +202,9 @@ function applyPcsTranslation(lang) {
 
   const ghBtn = document.querySelector(".project-links .btn-github");
   if (ghBtn) ghBtn.innerHTML = t.pcsBtnGitHub;
+
+  const footerP = document.querySelector("footer p");
+  if (footerP && t.footerText) footerP.innerHTML = t.footerText;
 }
 
 // ── Init immédiate + bouton ───────────────────────────────────────────────────

@@ -35,6 +35,7 @@ const translations = {
     algoResult3: "A* offre la meilleure performance en utilisant une heuristique appropriée",
     algoResult4: "Bellman-Ford gère correctement les cas limites",
     algoBtnGitHub: "Voir sur GitHub",
+    footerText: "© 2026 Hoarau Erwan. Tous droits réservés.",
     btnLabel: "FR → EN",
   },
   en: {
@@ -68,6 +69,7 @@ const translations = {
     algoResult3: "A* offers the best performance using an appropriate heuristic",
     algoResult4: "Bellman-Ford correctly handles edge cases",
     algoBtnGitHub: "View on GitHub",
+    footerText: "© 2026 Hoarau Erwan. All rights reserved.",
     btnLabel: "EN → ES",
   },
   es: {
@@ -101,6 +103,7 @@ const translations = {
     algoResult3: "A* ofrece el mejor rendimiento usando una heurística apropiada",
     algoResult4: "Bellman-Ford maneja correctamente los casos especiales",
     algoBtnGitHub: "Ver en GitHub",
+    footerText: "© 2026 Hoarau Erwan. Todos los derechos reservados.",
     btnLabel: "ES → FR",
   }
 };
@@ -172,6 +175,9 @@ function applyAlgoTranslation(lang) {
 
   const ghBtn = document.querySelector(".btn-github");
   if (ghBtn) ghBtn.innerHTML = t.algoBtnGitHub;
+
+  const footerP = document.querySelector("footer p");
+  if (footerP && t.footerText) footerP.innerHTML = t.footerText;
 }
 
 // ── Init immédiate + bouton ───────────────────────────────────────────────────

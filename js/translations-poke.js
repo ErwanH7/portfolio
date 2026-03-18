@@ -66,6 +66,7 @@ const translations = {
     pokeStatutText: "<strong>Statut : </strong> Projet personnel en développement continu<br><strong>Disponibilité : </strong> Disponible en ligne",
     pokeBtnWebsite: "Voir le site",
     pokeBtnGithub: "Voir sur GitHub",
+    footerText: "© 2026 Hoarau Erwan. Tous droits réservés.",
     btnLabel: "FR -> EN",
   },
   en: {
@@ -130,6 +131,7 @@ const translations = {
     pokeStatutText: "<strong>Status: </strong> Ongoing personal project<br><strong>Availability: </strong> Available online",
     pokeBtnWebsite: "Visit the site",
     pokeBtnGithub: "View on GitHub",
+    footerText: "© 2026 Hoarau Erwan. All rights reserved.",
     btnLabel: "EN -> ES",
   },
   es: {
@@ -194,6 +196,7 @@ const translations = {
     pokeStatutText: "<strong>Estado: </strong> Proyecto personal en desarrollo continuo<br><strong>Disponibilidad: </strong> Disponible en línea",
     pokeBtnWebsite: "Ver el sitio",
     pokeBtnGithub: "Ver en GitHub",
+    footerText: "© 2026 Hoarau Erwan. Todos los derechos reservados.",
     btnLabel: "ES -> FR",
   }
 };
@@ -292,6 +295,9 @@ function applyPokeTranslation(lang) {
 
   const ghBtn = document.querySelector(".btn-github");
   if (ghBtn) ghBtn.innerHTML = t.pokeBtnGithub;
+
+  const footerP = document.querySelector("footer p");
+  if (footerP && t.footerText) footerP.innerHTML = t.footerText;
 }
 
 // ── Init immédiate + bouton ───────────────────────────────────────────────────

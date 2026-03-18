@@ -26,6 +26,7 @@ const translations = {
     webLearnings: "Apprentissages",
     webLearningsText: "Ce premier projet m'a permis de bien comprendre les fondamentaux du web. En travaillant sans div ni flexbox, j'ai dû être créatif et approfondir ma compréhension de CSS. C'est une excellente base pour tous mes futurs projets web.",
     webBtnGitHub: "Voir sur GitHub",
+    footerText: "© 2026 Hoarau Erwan. Tous droits réservés.",
     btnLabel: "FR → EN",
   },
   en: {
@@ -50,6 +51,7 @@ const translations = {
     webLearnings: "Learning Outcomes",
     webLearningsText: "This first project allowed me to understand the fundamentals of the web well. By working without divs or flexbox, I had to be creative and deepen my understanding of CSS. It's an excellent foundation for all my future web projects.",
     webBtnGitHub: "View on GitHub",
+    footerText: "© 2026 Hoarau Erwan. All rights reserved.",
     btnLabel: "EN → ES",
   },
   es: {
@@ -74,6 +76,7 @@ const translations = {
     webLearnings: "Aprendizajes",
     webLearningsText: "Este primer proyecto me permitió comprender bien los fundamentos de la web. Al trabajar sin divs ni flexbox, tuve que ser creativo y profundizar mi comprensión de CSS. Es una excelente base para todos mis futuros proyectos web.",
     webBtnGitHub: "Ver en GitHub",
+    footerText: "© 2026 Hoarau Erwan. Todos los derechos reservados.",
     btnLabel: "ES → FR",
   }
 };
@@ -133,6 +136,9 @@ function applyWebTranslation(lang) {
 
   const ghBtn = document.querySelector(".btn-github");
   if (ghBtn) ghBtn.innerHTML = t.webBtnGitHub;
+
+  const footerP = document.querySelector("footer p");
+  if (footerP && t.footerText) footerP.innerHTML = t.footerText;
 }
 
 // ── Init immédiate + bouton ───────────────────────────────────────────────────

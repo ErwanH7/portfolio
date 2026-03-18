@@ -1,12 +1,13 @@
 // ── Traductions FR / EN / ES ─────────────────────────────────────────────────
 const translations = {
   fr: {
-    navAbout:   "MON PARCOURS",
+    navAbout:   "PRÉSENTATION",
     navProjects:"PROJETS",
     navSkills:  "COMPÉTENCES",
     navContact: "CONTACT",
 
-    aboutTitle: "MON PARCOURS NUMÉRIQUE",
+    aboutTitle:    "PRÉSENTATION",
+    aboutSubtitle: "MON PARCOURS NUMÉRIQUE",
     about1: "Bonjour, je m'appelle <strong>Hoarau Erwan</strong> et je suis actuellement étudiant en <strong>informatique à l'IUT de Bayonne et du Pays Basque.</strong>",
     about2: "Passionné par les <strong>nouvelles technologies</strong>, je souhaite développer mes compétences en <strong>développement d'applications et de sites web</strong>, dans le but de contribuer à des projets innovants.",
     about3: "Mon <strong>esprit d'équipe, ma rigueur et ma discipline</strong> me permettent de m'intégrer rapidement et de mener à bien des projets ambitieux.",
@@ -52,6 +53,7 @@ const translations = {
     skillsDb:    "Base de données",
     skillsProg:  "Programmation",
     skillsTools: "Outils",
+    footerText: "© 2026 Hoarau Erwan. Tous droits réservés.",
     btnLabel: "FR → EN",
   },
 
@@ -61,7 +63,8 @@ const translations = {
     navSkills:  "SKILLS",
     navContact: "CONTACT",
 
-    aboutTitle: "MY DIGITAL JOURNEY",
+    aboutTitle:    "PRESENTATION",
+    aboutSubtitle: "MY DIGITAL JOURNEY",
     about1: "Hello, my name is <strong>Hoarau Erwan</strong> and I am currently a student in <strong>Computer Science at the IUT of Bayonne and the Basque Country.</strong>",
     about2: "Passionate about <strong>new technologies</strong>, I want to develop my skills in <strong>application and web development</strong> in order to contribute to innovative projects.",
     about3: "My <strong>team spirit, rigor and discipline</strong> allow me to quickly integrate and successfully carry out ambitious projects.",
@@ -107,6 +110,7 @@ const translations = {
     skillsDb:    "Database",
     skillsProg:  "Programming",
     skillsTools: "Tools",
+    footerText: "© 2026 Hoarau Erwan. All rights reserved.",
     btnLabel: "EN → ES",
   },
 
@@ -116,7 +120,8 @@ const translations = {
     navSkills:  "HABILIDADES",
     navContact: "CONTACTO",
 
-    aboutTitle: "MI TRAYECTORIA DIGITAL",
+    aboutTitle:    "PRESENTACIÓN",
+    aboutSubtitle: "MI TRAYECTORIA DIGITAL",
     about1: "Hola, me llamo <strong>Hoarau Erwan</strong> y actualmente soy estudiante de <strong>informática en el IUT de Bayona y del País Vasco.</strong>",
     about2: "Apasionado por las <strong>nuevas tecnologías</strong>, quiero desarrollar mis habilidades en <strong>desarrollo de aplicaciones y sitios web</strong> para contribuir a proyectos innovadores.",
     about3: "Mi <strong>espíritu de equipo, rigor y disciplina</strong> me permiten integrarme rápidamente y llevar a cabo proyectos ambiciosos.",
@@ -162,6 +167,7 @@ const translations = {
     skillsDb:    "Base de datos",
     skillsProg:  "Programación",
     skillsTools: "Herramientas",
+    footerText: "© 2026 Hoarau Erwan. Todos los derechos reservados.",
     btnLabel: "ES → FR",
   }
 };
@@ -190,10 +196,12 @@ function applyTranslation(lang) {
   if (navItems[2]) navItems[2].innerHTML = t.navSkills;
   if (navItems[3]) navItems[3].innerHTML = t.navContact;
 
-  // Section about — paragraphes
+  // Section about — titre + sous-titre
   const aboutH2 = document.querySelector("#about h2");
   if (aboutH2) aboutH2.innerHTML = t.aboutTitle;
-  const aboutPs = document.querySelectorAll("#about > p");
+  const aboutSubtitleEl = document.getElementById("aboutSubtitle");
+  if (aboutSubtitleEl && t.aboutSubtitle) aboutSubtitleEl.innerHTML = t.aboutSubtitle;
+  const aboutPs = document.querySelectorAll("#about > p:not(.section-subtitle)");
   if (aboutPs[0]) aboutPs[0].innerHTML = t.about1;
   if (aboutPs[1]) aboutPs[1].innerHTML = t.about2;
   if (aboutPs[2]) aboutPs[2].innerHTML = t.about3;
@@ -255,6 +263,10 @@ function applyTranslation(lang) {
     skillCardHeaders[2].innerHTML = t.skillsProg;
     skillCardHeaders[3].innerHTML = t.skillsTools;
   }
+
+  // Footer
+  const footerP = document.querySelector("footer p");
+  if (footerP && t.footerText) footerP.innerHTML = t.footerText;
 }
 
 // ── État courant ─────────────────────────────────────────────────────────────

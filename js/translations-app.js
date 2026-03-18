@@ -31,6 +31,7 @@ const translations = {
     appLearnings: "Apprentissages",
     appLearningsText: "Ce projet m'a initié au développement d'applications \"vraies\" avec un framework professionnel. J'ai appris à travailler avec un cahier des charges, à gérer la complexité d'une application desktop, et à mettre en œuvre des patterns de conception orienté objet.",
     appBtnGitHub: "Voir sur GitHub",
+    footerText: "© 2026 Hoarau Erwan. Tous droits réservés.",
     btnLabel: "FR → EN",
   },
   en: {
@@ -60,6 +61,7 @@ const translations = {
     appLearnings: "Learning Outcomes",
     appLearningsText: "This project introduced me to developing \"real\" applications with a professional framework. I learned to work with a specifications document, manage the complexity of a desktop application, and implement object-oriented design patterns.",
     appBtnGitHub: "View on GitHub",
+    footerText: "© 2026 Hoarau Erwan. All rights reserved.",
     btnLabel: "EN → ES",
   },
   es: {
@@ -89,6 +91,7 @@ const translations = {
     appLearnings: "Aprendizajes",
     appLearningsText: "Este proyecto me introdujo al desarrollo de aplicaciones \"reales\" con un framework profesional. Aprendí a trabajar con un cahier des charges, gestionar la complejidad de una aplicación de escritorio e implementar patrones de diseño orientado a objetos.",
     appBtnGitHub: "Ver en GitHub",
+    footerText: "© 2026 Hoarau Erwan. Todos los derechos reservados.",
     btnLabel: "ES → FR",
   }
 };
@@ -154,6 +157,9 @@ function applyAppTranslation(lang) {
 
   const ghBtn = document.querySelector(".project-links .btn-github");
   if (ghBtn) ghBtn.innerHTML = t.appBtnGitHub;
+
+  const footerP = document.querySelector("footer p");
+  if (footerP && t.footerText) footerP.innerHTML = t.footerText;
 }
 
 // ── Init immédiate + bouton ───────────────────────────────────────────────────

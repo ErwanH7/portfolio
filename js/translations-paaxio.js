@@ -43,6 +43,7 @@ const translations = {
     paaxioProjectStatus: "État du projet",
     paaxioProjectStatusDesc: "<strong>Phase 1 : </strong> Cahier des charges complété et validé<br><strong>Phase 2 : </strong> En cours de développement",
     paaxioBtnGitHub: "Voir sur GitHub",
+    footerText: "© 2026 Hoarau Erwan. Tous droits réservés.",
     btnLabel: "FR → EN",
   },
   en: {
@@ -84,6 +85,7 @@ const translations = {
     paaxioProjectStatus: "Project Status",
     paaxioProjectStatusDesc: "<strong>Phase 1: </strong> Specifications document completed and validated<br><strong>Phase 2: </strong> In development",
     paaxioBtnGitHub: "View on GitHub",
+    footerText: "© 2026 Hoarau Erwan. All rights reserved.",
     btnLabel: "EN → ES",
   },
   es: {
@@ -125,6 +127,7 @@ const translations = {
     paaxioProjectStatus: "Estado del proyecto",
     paaxioProjectStatusDesc: "<strong>Fase 1: </strong> Pliego de condiciones completado y validado<br><strong>Fase 2: </strong> En desarrollo",
     paaxioBtnGitHub: "Ver en GitHub",
+    footerText: "© 2026 Hoarau Erwan. Todos los derechos reservados.",
     btnLabel: "ES → FR",
   }
 };
@@ -206,6 +209,9 @@ function applyPaaxioTranslation(lang) {
 
   const ghBtn = document.querySelector(".project-links .btn-github");
   if (ghBtn) ghBtn.innerHTML = t.paaxioBtnGitHub;
+
+  const footerP = document.querySelector("footer p");
+  if (footerP && t.footerText) footerP.innerHTML = t.footerText;
 }
 
 // ── Init immédiate + bouton ───────────────────────────────────────────────────
