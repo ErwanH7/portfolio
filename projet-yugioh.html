@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="js/lang.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Yu-Gi-Oh - Portfolio Erwan Hoarau</title>
+    <link rel="canonical" href="https://www.erwanhoarau.com/projet-yugioh.html">
+    <meta name="description" content="Projet personnel Yu-Gi-Oh : application web Python (Flask, SQLite) de gestion de collection avec deck builder, API YGOPRODeck et assistant IA LangChain — Erwan Hoarau.">
+    <meta property="og:title"       content="Collection Yu-Gi-Oh Python/Flask/IA - Portfolio Erwan Hoarau">
+    <meta property="og:description" content="Application web de gestion de collection Yu-Gi-Oh en Python avec deck builder et assistant IA LangChain.">
+    <meta property="og:url"         content="https://www.erwanhoarau.com/projet-yugioh.html">
+    <meta property="og:type"        content="website">
+    <meta property="og:image"       content="https://www.erwanhoarau.com/image/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+    <script src="js/translations-widget.js" defer></script>
+    <script src="https://feedeko.timdidelot.fr/widget.js" data-api-key="fw_d02bd7165bea4b718150eff1a589397d" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link">
+                <img src="image/logo.png" alt="Logo Hoarau Erwan" class="logo-header">
+            </a>
+            <ul>
+                <li><a href="index.html#about">MON PARCOURS</a></li>
+                <li><a href="index.html#projects">PROJETS</a></li>
+                <li><a href="index.html#skills">COMPÉTENCES</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Sélecteur de langue -->
+            <div class="lang-switcher" id="langSwitcher">
+                <button class="lang-globe-btn" id="langGlobeBtn" aria-label="Changer de langue">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <span class="lang-current" id="langCurrent">FR</span>
+                </button>
+                <ul class="lang-dropdown" id="langDropdown">
+                    <li><button class="lang-option" data-lang="fr"><span class="fi fi-fr"></span> Français</button></li>
+                    <li><button class="lang-option" data-lang="en"><span class="fi fi-gb"></span> English</button></li>
+                    <li><button class="lang-option" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="project-detail">
+        <a href="index.html#projects" class="back-link">← Retour aux projets</a>
+
+        <h2>Gestion de collection Yu-Gi-Oh</h2>
+        <h3 class="subtitle">Projet personnel en Python avec assistant IA</h3>
+
+        <div class="detail-content">
+            <img src="image/logo_yugioh.svg" alt="Logo Collection Yu-Gi-Oh" class="detail-img" width="300" height="300">
+
+            <h3>Description du projet</h3>
+            <p class="project-description">
+                Ce projet personnel est une <strong>application web locale</strong> pour gérer ma collection de cartes Yu-Gi-Oh physiques. Elle permet d'enregistrer ses cartes, de voir ce qu'il manque pour compléter un deck et de classer ses decks du plus au moins réalisable. Les données des cartes (traductions, prix Cardmarket, banlist TCG) viennent de l'API publique <strong>YGOPRODeck</strong>. Un <strong>deck builder</strong> propose des decks à partir des listes de tournoi récentes, et un <strong>assistant IA</strong> basé sur un agent <strong>LangChain</strong> construit un deck sur demande en français.
+            </p>
+
+            <h3>Objectifs</h3>
+            <ul class="objectives-list">
+                <li>Remplacer un suivi manuel de collection par une application fiable</li>
+                <li>Savoir rapidement quelles cartes acheter pour terminer un deck</li>
+                <li>Construire des decks compétitifs avec les cartes déjà possédées</li>
+                <li>Mettre en pratique un agent IA à outils vu en cours (R5.14)</li>
+            </ul>
+
+            <h3>Technologies utilisées</h3>
+            <div class="tech-tags">
+                <span><i class="devicon-python-plain colored"></i> Python</span>
+                <span><i class="devicon-flask-original colored"></i> Flask</span>
+                <span><i class="devicon-sqlite-plain colored"></i> SQLite</span>
+                <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                <span><i class="devicon-html5-plain colored"></i> HTML5 / <i class="devicon-css3-plain colored"></i> CSS3</span>
+                <span><i class="devicon-pytest-plain colored"></i> pytest</span>
+                <span>LangChain</span>
+                <span>Ollama</span>
+                <span>Tesseract.js (OCR)</span>
+                <span>API YGOPRODeck</span>
+            </div>
+
+            <h3>Fonctionnalités principales</h3>
+            <ul class="features-list">
+                <li>Recherche de cartes en français et en anglais, avec cache local des données</li>
+                <li>Ajout de cartes par code de set (ex. LOB-FR005) ou par extension complète</li>
+                <li>Scanner : lecture du nom et du code de la carte avec la caméra (OCR), y compris depuis un téléphone</li>
+                <li>Gestion des decks : saisie manuelle, import et export de fichiers <strong>.ydk</strong>, lien <strong>ydke://</strong></li>
+                <li>Calcul des cartes manquantes et classement des decks du plus au moins réalisable</li>
+                <li>Deck builder : liste type par archétype tirée des derniers decks de tournoi, dans la limite de la banlist</li>
+                <li>Assistant IA : un agent LangChain consulte la collection, les listes types et la banlist, puis propose un deck vérifié</li>
+            </ul>
+
+            <h3>Points forts</h3>
+            <ul class="strengths-list">
+                <li>L'agent IA ne propose qu'un deck validé par ses outils, et ouvre la base en lecture seule</li>
+                <li>Fonctionne avec un modèle local (Ollama) ou un fournisseur en ligne au choix</li>
+                <li>Avertissements de banlist sans bloquer la saisie</li>
+                <li>Une soixantaine de tests automatisés avec <strong>pytest</strong></li>
+                <li>Données stockées en local dans une base SQLite facile à sauvegarder</li>
+            </ul>
+
+            <h3>Défis techniques</h3>
+            <ul class="challenges-list">
+                <li>L'API ne connaît que les codes de set anglais : correspondance des codes français</li>
+                <li>Découper un coffret de plusieurs decks d'après le code des cartes</li>
+                <li>Tirer une liste type fiable de decks de tournoi qui mélangent plusieurs variantes</li>
+                <li>Rendre l'OCR exploitable en ne lisant qu'une bande fine sur le texte de la carte</li>
+                <li>Empêcher l'agent IA d'inventer des cartes ou des decks invalides</li>
+            </ul>
+
+            <h3>Apprentissages</h3>
+            <p class="learnings-description">
+                Ce projet personnel m'a permis d'approfondir mes compétences en :
+            </p>
+            <ul class="learnings-list">
+                <li>Développement web en Python avec Flask et SQLite</li>
+                <li>Consommation d'une API externe et mise en cache des données</li>
+                <li>Conception d'un agent IA à outils avec LangChain</li>
+                <li>Tests automatisés avec pytest</li>
+                <li>Traitement d'images et OCR dans le navigateur</li>
+            </ul>
+
+            <h3>État du projet</h3>
+            <p style="background: rgba(162, 90, 233, 0.1); padding: 15px; border-radius: 8px; margin: 15px 0;" class="project-statut">
+                <strong>Statut : </strong> Projet personnel en développement continu<br><strong>Disponibilité : </strong> Application locale, non publiée en ligne pour le moment. 
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Hoarau Erwan. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/translations-ygo.js"></script>
+    <script src="js/project-detail.js"></script>
+</body>
+</html>

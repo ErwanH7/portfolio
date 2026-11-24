@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="t">
+  <title id="t">Logo Collection Yu-Gi-Oh</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#012459"/>
+      <stop offset="1" stop-color="#6e027d"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a1f6e"/>
+      <stop offset="1" stop-color="#150b3a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe08a"/>
+      <stop offset="1" stop-color="#d79a1e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+
+  <!-- Cartes en éventail (le deck) -->
+  <g transform="translate(256 286)">
+    <rect x="-95" y="-140" width="190" height="270" rx="16" fill="#544ae7" stroke="#a5baee" stroke-width="5" transform="rotate(-18) translate(-30 0)" opacity="0.85"/>
+    <rect x="-95" y="-140" width="190" height="270" rx="16" fill="#8d3fd6" stroke="#e254f4" stroke-width="5" transform="rotate(14) translate(28 0)" opacity="0.9"/>
+
+    <!-- Carte de devant -->
+    <rect x="-95" y="-150" width="190" height="270" rx="16" fill="url(#card)" stroke="url(#gold)" stroke-width="8"/>
+    <!-- Zone illustration -->
+    <rect x="-70" y="-122" width="140" height="130" rx="8" fill="#0b0626" stroke="url(#gold)" stroke-width="4"/>
+    <!-- Étoile -->
+    <path d="M0 -105 L13 -71 L49 -70 L21 -48 L31 -13 L0 -33 L-31 -13 L-21 -48 L-49 -70 L-13 -71 Z" fill="url(#gold)"/>
+    <!-- Lignes de texte de la carte -->
+    <rect x="-70" y="28" width="140" height="10" rx="5" fill="#a5baee" opacity="0.7"/>
+    <rect x="-70" y="48" width="110" height="10" rx="5" fill="#a5baee" opacity="0.5"/>
+    <rect x="-70" y="68" width="125" height="10" rx="5" fill="#a5baee" opacity="0.5"/>
+  </g>
+
+  <!-- Badge "deck validé" -->
+  <circle cx="388" cy="398" r="58" fill="#e254f4" stroke="#012459" stroke-width="10"/>
+  <path d="M360 399 L380 419 L417 380" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Étincelle IA -->
+  <path d="M110 92 Q116 122 146 128 Q116 134 110 164 Q104 134 74 128 Q104 122 110 92 Z" fill="#ffe08a"/>
+  <path d="M160 52 Q163 66 177 69 Q163 72 160 86 Q157 72 143 69 Q157 66 160 52 Z" fill="#a5baee"/>
+</svg>

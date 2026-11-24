@@ -18,9 +18,12 @@ const translations = {
     timeline2Date:    "2024 — 2025",
     timeline2Title:   "1ère année de BUT Informatique",
     timeline2Desc:    "IUT de Bayonne et du Pays Basque — Premiers projets en <strong>HTML/CSS</strong>, <strong>Python</strong>, <strong>C++</strong> et algorithmes. Introduction au développement web et aux bases de données <strong>SQL</strong>.",
-    timeline3Date:    "2025 — aujourd'hui",
+    timeline3Date:    "2025 — 2026",
     timeline3Title:   "2ème année de BUT Informatique",
     timeline3Desc:    "Approfondissement en <strong>PHP</strong>, <strong>JavaScript</strong> et <strong>SQL</strong>. Projets full-stack et développement d'applications plus complexes.",
+    timeline4Date:    "Septembre 2026 — aujourd'hui",
+    timeline4Title:   "3ème année de BUT Informatique en alternance",
+    timeline4Desc:    "Alternant chez <strong>DIMIONE Systems</strong> depuis septembre 2026, en parallèle de ma 3ème année à l'IUT de Bayonne et du Pays Basque.",
 
     projectsTitle: "MES PROJETS",
     project1Title: "Création d'un site web",
@@ -47,6 +50,9 @@ const translations = {
     project6Desc:  "Projet personnel : conversion d'une base de données Excel en base <strong>SQL</strong>, puis développement d'un site complet en <strong>PHP</strong>, <strong>MySQL</strong>, <strong>HTML</strong>, <strong>CSS</strong> et <strong>JavaScript</strong>.",
     project6bis: "Voir les détails du projet",
     project6ter: "Voir le site",
+    project7Title: "Gestion de collection Yu-Gi-Oh",
+    project7Desc:  "Projet personnel : application web en <strong>Python</strong> (<strong>Flask</strong>, <strong>SQLite</strong>) pour enregistrer ses cartes, voir ce qu'il manque pour compléter un deck et générer des decks à partir des listes de tournoi via l'API <strong>YGOPRODeck</strong>. Inclut un assistant <strong>IA</strong> (agent <strong>LangChain</strong> à outils) qui propose des decks vérifiés.",
+    project7bis: "Voir les détails du projet",
 
     competencesTitle: "MES COMPÉTENCES",
     skillsWeb:   "Web",
@@ -75,9 +81,12 @@ const translations = {
     timeline2Date:    "2024 — 2025",
     timeline2Title:   "1st year of Computer Science Bachelor",
     timeline2Desc:    "Deepening skills in <strong>PHP</strong>, <strong>JavaScript</strong> and <strong>SQL</strong>. Full-stack projects and more complex application development.",
-    timeline3Date:    "2025 — today",
+    timeline3Date:    "2025 — 2026",
     timeline3Title:   "2nd year of Computer Science Bachelor",
     timeline3Desc:    "Deepening skills in <strong>PHP</strong>, <strong>JavaScript</strong> and <strong>SQL</strong>. Full-stack projects and more complex application development.",
+    timeline4Date:    "September 2026 — today",
+    timeline4Title:   "3rd year of Computer Science Bachelor (work-study)",
+    timeline4Desc:    "Work-study student at <strong>DIMIONE Systems</strong> since September 2026, alongside my 3rd year at IUT de Bayonne et du Pays Basque.",
 
     projectsTitle: "PROJECTS",
     project1Title: "Website Creation",
@@ -104,6 +113,9 @@ const translations = {
     project6Desc:  "Personal project: converting an Excel database to <strong>SQL</strong>, then building a full site in <strong>PHP</strong>, <strong>MySQL</strong>, <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>.",
     project6bis: "See project details",
     project6ter: "Visit the site",
+    project7Title: "Yu-Gi-Oh collection manager",
+    project7Desc:  "Personal project: a <strong>Python</strong> web app (<strong>Flask</strong>, <strong>SQLite</strong>) to record your cards, see what is missing to complete a deck and build decks from tournament lists through the <strong>YGOPRODeck</strong> API. Includes an <strong>AI</strong> assistant (tool-using <strong>LangChain</strong> agent) that suggests validated decks.",
+    project7bis: "View project details",
 
     competencesTitle: "SKILLS",
     skillsWeb:   "Web",
@@ -132,9 +144,12 @@ const translations = {
     timeline2Date:    "2024 — 2025",
     timeline2Title:   "1er año de Grado en Informática",
     timeline2Desc:    "IUT de Bayona y del País Vasco — Primeros proyectos en <strong>HTML/CSS</strong>, <strong>Python</strong>, <strong>C++</strong> y algoritmia. Introducción al desarrollo web y a las bases de datos <strong>SQL</strong>.",
-    timeline3Date:    "2025 — hoy",
+    timeline3Date:    "2025 — 2026",
     timeline3Title:   "2º año de Grado en Informática",
     timeline3Desc:    "Profundización en <strong>PHP</strong>, <strong>JavaScript</strong> y <strong>SQL</strong>. Proyectos full-stack y desarrollo de aplicaciones más complejas.",
+    timeline4Date:    "Septiembre 2026 — hoy",
+    timeline4Title:   "3er año de Grado en Informática en alternancia",
+    timeline4Desc:    "Estudiante en alternancia en <strong>DIMIONE Systems</strong> desde septiembre de 2026, junto con mi 3er año en el IUT de Bayona y del País Vasco.",
 
     projectsTitle: "MIS PROYECTOS",
     project1Title: "Creación de un sitio web",
@@ -161,6 +176,9 @@ const translations = {
     project6Desc:  "Proyecto personal: conversión de una base de datos Excel a <strong>SQL</strong>, luego desarrollo de un sitio completo en <strong>PHP</strong>, <strong>MySQL</strong>, <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong>.",
     project6bis: "Ver detalles del proyecto",
     project6ter: "Ver el sitio",
+    project7Title: "Gestión de colección Yu-Gi-Oh",
+    project7Desc:  "Proyecto personal: aplicación web en <strong>Python</strong> (<strong>Flask</strong>, <strong>SQLite</strong>) para registrar tus cartas, ver qué falta para completar un mazo y generar mazos a partir de listas de torneo con la API de <strong>YGOPRODeck</strong>. Incluye un asistente de <strong>IA</strong> (agente <strong>LangChain</strong> con herramientas) que propone mazos verificados.",
+    project7bis: "Ver los detalles del proyecto",
 
     competencesTitle: "MIS HABILIDADES",
     skillsWeb:   "Web",
@@ -220,6 +238,7 @@ function applyTranslation(lang) {
     setTimeline(timelineItems[0], t.timeline1Date, t.timeline1Title, t.timeline1Desc);
     setTimeline(timelineItems[1], t.timeline2Date, t.timeline2Title, t.timeline2Desc);
     setTimeline(timelineItems[2], t.timeline3Date, t.timeline3Title, t.timeline3Desc);
+    setTimeline(timelineItems[3], t.timeline4Date, t.timeline4Title, t.timeline4Desc);
   }
 
   // Section projets
@@ -251,6 +270,7 @@ function applyTranslation(lang) {
   setCard(3, t.project4Title, t.project4Desc, t.project4bis, t.project4ter, ".btn-primary");
   setCard(4, t.project5Title, t.project5Desc, t.project5bis, t.project5ter, ".btn-primary");
   setCard(5, t.project6Title, t.project6Desc, t.project6bis, t.project6ter, ".btn-primary");
+  setCard(6, t.project7Title, t.project7Desc, t.project7bis, null);
 
   // Section compétences
   const skillsH2 = document.querySelector("#skills h2");
